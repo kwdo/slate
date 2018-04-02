@@ -582,4 +582,59 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the Video to retrieve
 
+# Deleted Objects
+
+## Get All Deleted Objects from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/deleted/1501545600"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    {
+        "id": 2147386,
+        "content_class": "VrVideoTopic",
+        "deleted_date": "2018-03-30T13:54:03+0200"
+    },
+    {
+        "id": 2147385,
+        "content_class": "VrVideo",
+        "deleted_date": "2018-03-30T13:52:29+0200"
+    },
+    {
+        "id": 2147384,
+        "content_class": "VrMagazineIssue",
+        "deleted_date": "2018-03-30T13:50:01+0200"
+    },
+    {
+        "id": 2147383,
+        "content_class": "VrMagazineArticle",
+        "deleted_date": "2018-03-30T13:49:42+0200"
+    },
+    {
+        "id": 2147381,
+        "content_class": "VrNews",
+        "deleted_date": "2018-03-30T13:44:44+0200"
+    }
+]
+```
+
+This endpoint retrieves all Deleted Objects with deleted dates greater than given timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/deleted/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+
 
