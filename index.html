@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Verkehrsrundschau API</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -212,9 +212,6 @@
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -222,111 +219,111 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#news" class="toc-h1 toc-link" data-title="news">News</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#get-all-news-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-news-from-given-timestamp">Get All News from given timestamp</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#get-a-specific-news" class="toc-h2 toc-link" data-title="get-a-specific-news">Get a Specific News</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#magazine" class="toc-h1 toc-link" data-title="magazine">Magazine</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-magazine-issues-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-magazine-issues-from-given-timestamp">Get All Magazine Issues from given timestamp</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-magazine-issue" class="toc-h2 toc-link" data-title="get-a-specific-magazine-issue">Get a Specific Magazine Issue</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-magazine-articles-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-magazine-articles-from-given-timestamp">Get All Magazine Articles from given timestamp</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-magazine-article" class="toc-h2 toc-link" data-title="get-a-specific-magazine-article">Get a Specific Magazine Article</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-magazine-articles-by-magazine-issue" class="toc-h2 toc-link" data-title="get-all-magazine-articles-by-magazine-issue">Get All Magazine Articles by Magazine Issue</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#video" class="toc-h1 toc-link" data-title="video">Video</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-video-topics-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-video-topics-from-given-timestamp">Get All Video Topics from given timestamp</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-video-topic" class="toc-h2 toc-link" data-title="get-a-specific-video-topic">Get a Specific Video Topic</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-videos-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-videos-from-given-timestamp">Get All Videos from given timestamp</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-video" class="toc-h2 toc-link" data-title="get-a-specific-video">Get a Specific Video</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#deleted-objects" class="toc-h1 toc-link" data-title="deleted-objects">Deleted Objects</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-deleted-objects-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-deleted-objects-from-given-timestamp">Get All Deleted Objects from given timestamp</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
-        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
+        <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"http://rest-api.verkehrsrundschau.de"</span>
+  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 <blockquote>
 <p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
 </blockquote>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>This API expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
+<p><code>X-Auth-Token: meowmeowmeow</code></p>
 
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+<h1 id='news'>News</h1><h2 id='get-all-news-from-given-timestamp'>Get All News from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/news/ids/1519257600"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"2135028"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2135002"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2134982"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2134976"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2134973"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2134937"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2134926"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2134150"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2134636"</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
+<p>This endpoint retrieves all news with change dates greater than give timestamp.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
+<p><code>GET http://rest-api.verkehrsrundschau.de/news/ids/&lt;TIMESTAMP&gt;</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -336,51 +333,36 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>timestamp</td>
+<td>0</td>
+<td>Unix Timestamp to start with</td>
 </tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h2 id='get-a-specific-news'>Get a Specific News</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/news/detail/2135002"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2135002"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Logimat: M3 mit neuen App-Funktionen"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-26 13:05:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-26 11:17:48"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dr. Malek stellt in Stuttgart die Transportmanagementsoftware M3 Logisticware im komplett überarbeiteten Design sowie die um neue Funktionen und Module erweiterte M3 App vor."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Dresden. Dr. Malek Software (Halle 8, Stand A06) zeigt auf der Logimat sein Transportmanagementsystem M3 Logisticware im komplett &amp;uuml;berarbeiteten Design. So wurde die Software f&amp;uuml;r Windows 10 optimiert und erm&amp;ouml;glicht jetzt zudem die Nutzung mehrerer Monitore mit unterschiedlichen Formaten und Aufl&amp;ouml;sungen. Dar&amp;uuml;ber hinaus verf&amp;uuml;gt M3 neuerdings &amp;uuml;ber spezialisierte Erfassungsmasken f&amp;uuml;r verschiedene Gesch&amp;auml;ftsbereiche wie St&amp;uuml;ckgut oder Ladungsverkehr und neue Features f&amp;uuml;r schnelleres Arbeiten und Recherchieren. &amp;ldquo;Bei der Weiterentwicklung der Oberfl&amp;auml;chen haben wir darauf geachtet, dass sich die Anwender unserer rund 400 Kunden sofort damit zurechtfinden&amp;rdquo;, betont Gesch&amp;auml;ftsf&amp;uuml;hrer Ralf Malek.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;b&gt;KEP-L&amp;ouml;sung in der App&lt;/b&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Ebenfalls weiterentwickelt wurde die M3 App f&amp;uuml;r das mobile Auftragsmanagement. Neben den App-Versionen f&amp;uuml;r St&amp;uuml;ckgut und Ladungsverkehr gibt es mit der KEP-Variante inzwischen auch eine L&amp;ouml;sung f&amp;uuml;r Paket und Kurierdienste mit kleinteiligen Sendungen. Die App verf&amp;uuml;gt jetzt au&amp;szlig;erdem &amp;uuml;ber weitere Funktionalit&amp;auml;ten f&amp;uuml;r die Hallen-Umschlagscannung. In Verbindung mit der ebenfalls neuen Scannerserie TC2X von Zebra will das Dresdner Familienunternehmen die Neuerungen live am Messestand demonstrieren. (mh)&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/5709/Malek1920.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image_copyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dr. Malek Software"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image_caption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Die M3 App verf&amp;uuml;gt jetzt &amp;uuml;ber weitere Funktionalit&amp;auml;ten f&amp;uuml;r die Hallen-Umschlagscannung&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"navigation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NFZ + Fuhrpark"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Markt Lkw-Landverkehr &amp; Stückgut,Markt KEP-Markt,IT Speditions-Software,IT Telematik Kommunikation Lkw Fahrer,Event Logimat Messe,Dr. Malek Software"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attachments"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<p>This endpoint retrieves a specific news.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<p><code>GET http://rest-api.verkehrsrundschau.de/news/detail/&lt;ID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -390,36 +372,60 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>The ID of the news to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h1 id='magazine'>Magazine</h1><h2 id='get-all-magazine-issues-from-given-timestamp'>Get All Magazine Issues from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/magazine_issue/ids/1514764800"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"2133000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2064141"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2062176"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2059972"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2057120"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2052296"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Magazine Issues with change dates greater than give timestamp.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/magazine_issue/ids/&lt;TIMESTAMP&gt;</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>timestamp</td>
+<td>0</td>
+<td>Unix Timestamp to start with</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-magazine-issue'>Get a Specific Magazine Issue</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/magazine_issue/detail/2133000"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2133000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ausgabe 08/2018"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-22 15:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-21 10:23:06"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/4903/thumbnails/90003_2018_73_08_I_001_Titelseite_EA_Roadshow_250028_print.pdf.15633211.png"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"issue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url_epaper_lesen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://digital.verkehrsrundschau.de/verkehrsrundschau082018/"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
+<p>This endpoint retrieves a specific Magazine Issue.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/magazine_issue/detail/&lt;ID&gt;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -429,11 +435,436 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>The ID of the Issue to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-magazine-articles-from-given-timestamp'>Get All Magazine Articles from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/magazine_article/ids/1517443200"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"2133082"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133079"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133076"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133066"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133064"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133062"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133057"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133051"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133049"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133047"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133045"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133043"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133040"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133036"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133034"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133032"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133008"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Magazine Articles with change dates greater than give timestamp.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/magazine_article/ids/&lt;TIMESTAMP&gt;</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>timestamp</td>
+<td>0</td>
+<td>Unix Timestamp to start with</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-magazine-article'>Get a Specific Magazine Article</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/magazine_article/detail/2133082"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2133082"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"issue_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2133000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alles was Nutzfahrzeuge betrifft, kommt ins Portfolio"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-22 15:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-21 12:40:37"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"kicker"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Krone ET-Zentrallager"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interview mit Ralf Faust, Geschäftsführer Kundendienst, Service und Telematik der Krone Gruppe, über die Funktion des neuen Zentrallagers sowie die künftigen Expansionspläne."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;&lt;strong&gt;Wieso war die Neuordnung des Ersatzteilgesch&amp;auml;ftes geboten?&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Der Umsatz unseres ET-Gesch&amp;auml;ftes ist in den letzten sechs Jahren von 12 auf 40 Millionen Euro gestiegen. Das war auf Dauer mit unseren alten Strukturen nicht mehr zu bew&amp;auml;ltigen. Zudem versenden wir rund 50 Prozent der Ersatzteile europaweit im Nachtsprung. Das erfordert eine moderne Logistik. Wir sehen zudem, dass unsere Kunden eine hohe Affinit&amp;auml;t zur Online-Bestellung haben und bereits eine Million Euro Umsatz pro Monat im Online-Shop machen. Und die Kunden bestellen selbst Teile, die 13,6 Meter lang und 50 Kilo schwer sind. Um das realisieren zu k&amp;ouml;nnen, mussten wir neu denken. Das Ergebnis ist unser neues Zentrallager in Herzlake.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Bei der ET-Versorgung geht es meist um die Schnelligkeit. Wie schnell ist Krone mit dem neuen Lager?&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Ich erl&amp;auml;utere das mal an einem Beispiel: Wir haben einen gro&amp;szlig;en Flottenbetreiber in der Kundschaft, der bis zu 10.000 Trailer von Krone im Einsatz hat und selbst repariert. Nach unseren Analysen betr&amp;auml;gt die durchschnittliche Zustellzeit 2,9 Tage. Das mag f&amp;uuml;r sich betrachtet mehr sein als die propagierte 24-Stunden-Lieferung. Aber wir sprechen da vom Durchschnitt aller Teile. Und das unabh&amp;auml;ngig von der Varianz und Destination in Europa.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Das neue Zentrallager ist aber nicht Krones einziges ET-Lager?&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Nein, wir verf&amp;uuml;gen &amp;uuml;ber sechs Hubs in Europa f&amp;uuml;r die lokale Belieferung. Aktuell planen wir die Vernetzung - inklusive des ET-Lagers in der T&amp;uuml;rkei. Dann weiter sind geplant England - trotz Brexit - und Spanien.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Geschwindigkeit ist eines - bringt aber wohl nur etwas, wenn der Kunde auch das richtige Teil bekommt?&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;V&amp;ouml;llig richtig. Aber da haben wir zur IAA 2016 unser OR-Code-System eingef&amp;uuml;hrt. &amp;Uuml;ber das Scannen des QR-Codes mit dem Smartphone lassen sich jedes Fahrzeug und die darin verbauten Bauteile ganz exakt identifizieren. Die Nutzer k&amp;ouml;nnen &amp;uuml;ber ihre Login-Daten alle wichtigen Infos abrufen. Aktuell haben wir bereits etwa 250.000 Trailer hinterlegt. Einiges m&amp;uuml;ssen wir noch nachhalten und ein paar &amp;auml;ltere Modelle manuell einpflegen. Aber ich gehe davon aus, dass wir zeitnah alle etwa 350.000 Anh&amp;auml;nger und Auflieger, die sich auf Europas Stra&amp;szlig;en befinden, im System haben werden.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Was sind denn die g&amp;auml;ngigsten Ersatzteile?&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Wir verkaufen pro Monat 400 (!) Profiliner-T&amp;uuml;ren. F&amp;uuml;r Gro&amp;szlig;kunden bevorraten wir sogar Komponenten in passenden Farben. Genau genommen k&amp;ouml;nnte man aus den ET-Paketen, die wir f&amp;uuml;r einige gro&amp;szlig;e Flottenbetreiber bevorraten, zwei komplette Trailer bauen. Das mag sich &amp;uuml;bertrieben anh&amp;ouml;ren - ist es aber nicht.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Geben Sie uns doch noch ein paar Eckdaten zum neuen Zentrallager.&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Wir haben aktuell 10.000 Artikel im Lager, die Kunden k&amp;ouml;nnen &amp;uuml;ber unseren Online-Shop rund 50.000 Artikel bestellen. Am Lager haben wir aktuell alleine 600 T&amp;uuml;ren und wir arbeiten pro Monat rund 5000 Auftr&amp;auml;ge ab. Dabei haben wir mit 1,5 Prozent einen sehr kleinen Anteil an Retouren. Und auf dem Gel&amp;auml;nde h&amp;auml;tten wir Platz, um unsere 105 Meter lange Halle noch mal zu spiegeln und weitere 8000 Quadratmeter Lagerfl&amp;auml;che zu realisieren.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Klingt nach gro&amp;szlig;en Pl&amp;auml;nen:&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Die haben wir auch! Wir wollen uns abseits der Ersatzteile f&amp;uuml;r unsere Lafetten, Trailer und Wechselbr&amp;uuml;cken zu einem gro&amp;szlig;en Ersatzteilh&amp;auml;ndler entwickeln. Alles was Bezug zum Nutzfahrzeug hat, etwa Bremsbel&amp;auml;ge, Reifen, Sto&amp;szlig;d&amp;auml;mpfer, wollen wir &amp;uuml;ber kurz oder lang ins Portfolio nehmen. Nur ein Beispiel: Krone verkauft alleine 5000 Reifen unserer Eigenmarke pro Jahr. &amp;Uuml;ber alle Teile gehen aktuell 70 Prozent unserer Lieferungen ins Ausland. Gestern hatten wir die erste Lieferung nach S&amp;uuml;dkorea. Auch Chile war schon dabei. Da ist also noch Luft nach oben.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test + Technik"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.autohaus.de/sixcms/media.php/4903/thumbnails/90003_2018_73_08_I_044-046_Krone_ET-Zentrum_249369_print.15633412.pdf.15633415.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VR Interview,Krone Trailer 1112"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific Magazine Article.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/magazine_article/detail/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the Article to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-magazine-articles-by-magazine-issue'>Get All Magazine Articles by Magazine Issue</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/magazine_article/by_issue/2133000"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2133082"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"issue_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2133000"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alles was Nutzfahrzeuge betrifft, kommt ins Portfolio"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-22 15:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-21 12:40:37"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"kicker"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Krone ET-Zentrallager"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interview mit Ralf Faust, Geschäftsführer Kundendienst, Service und Telematik der Krone Gruppe, über die Funktion des neuen Zentrallagers sowie die künftigen Expansionspläne."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"page_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;&lt;strong&gt;Wieso war die Neuordnung des Ersatzteilgesch&amp;auml;ftes geboten?&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Der Umsatz unseres ET-Gesch&amp;auml;ftes ist in den letzten sechs Jahren von 12 auf 40 Millionen Euro gestiegen. Das war auf Dauer mit unseren alten Strukturen nicht mehr zu bew&amp;auml;ltigen. Zudem versenden wir rund 50 Prozent der Ersatzteile europaweit im Nachtsprung. Das erfordert eine moderne Logistik. Wir sehen zudem, dass unsere Kunden eine hohe Affinit&amp;auml;t zur Online-Bestellung haben und bereits eine Million Euro Umsatz pro Monat im Online-Shop machen. Und die Kunden bestellen selbst Teile, die 13,6 Meter lang und 50 Kilo schwer sind. Um das realisieren zu k&amp;ouml;nnen, mussten wir neu denken. Das Ergebnis ist unser neues Zentrallager in Herzlake.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Bei der ET-Versorgung geht es meist um die Schnelligkeit. Wie schnell ist Krone mit dem neuen Lager?&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Ich erl&amp;auml;utere das mal an einem Beispiel: Wir haben einen gro&amp;szlig;en Flottenbetreiber in der Kundschaft, der bis zu 10.000 Trailer von Krone im Einsatz hat und selbst repariert. Nach unseren Analysen betr&amp;auml;gt die durchschnittliche Zustellzeit 2,9 Tage. Das mag f&amp;uuml;r sich betrachtet mehr sein als die propagierte 24-Stunden-Lieferung. Aber wir sprechen da vom Durchschnitt aller Teile. Und das unabh&amp;auml;ngig von der Varianz und Destination in Europa.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Das neue Zentrallager ist aber nicht Krones einziges ET-Lager?&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Nein, wir verf&amp;uuml;gen &amp;uuml;ber sechs Hubs in Europa f&amp;uuml;r die lokale Belieferung. Aktuell planen wir die Vernetzung - inklusive des ET-Lagers in der T&amp;uuml;rkei. Dann weiter sind geplant England - trotz Brexit - und Spanien.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Geschwindigkeit ist eines - bringt aber wohl nur etwas, wenn der Kunde auch das richtige Teil bekommt?&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;V&amp;ouml;llig richtig. Aber da haben wir zur IAA 2016 unser OR-Code-System eingef&amp;uuml;hrt. &amp;Uuml;ber das Scannen des QR-Codes mit dem Smartphone lassen sich jedes Fahrzeug und die darin verbauten Bauteile ganz exakt identifizieren. Die Nutzer k&amp;ouml;nnen &amp;uuml;ber ihre Login-Daten alle wichtigen Infos abrufen. Aktuell haben wir bereits etwa 250.000 Trailer hinterlegt. Einiges m&amp;uuml;ssen wir noch nachhalten und ein paar &amp;auml;ltere Modelle manuell einpflegen. Aber ich gehe davon aus, dass wir zeitnah alle etwa 350.000 Anh&amp;auml;nger und Auflieger, die sich auf Europas Stra&amp;szlig;en befinden, im System haben werden.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Was sind denn die g&amp;auml;ngigsten Ersatzteile?&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Wir verkaufen pro Monat 400 (!) Profiliner-T&amp;uuml;ren. F&amp;uuml;r Gro&amp;szlig;kunden bevorraten wir sogar Komponenten in passenden Farben. Genau genommen k&amp;ouml;nnte man aus den ET-Paketen, die wir f&amp;uuml;r einige gro&amp;szlig;e Flottenbetreiber bevorraten, zwei komplette Trailer bauen. Das mag sich &amp;uuml;bertrieben anh&amp;ouml;ren - ist es aber nicht.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Geben Sie uns doch noch ein paar Eckdaten zum neuen Zentrallager.&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Wir haben aktuell 10.000 Artikel im Lager, die Kunden k&amp;ouml;nnen &amp;uuml;ber unseren Online-Shop rund 50.000 Artikel bestellen. Am Lager haben wir aktuell alleine 600 T&amp;uuml;ren und wir arbeiten pro Monat rund 5000 Auftr&amp;auml;ge ab. Dabei haben wir mit 1,5 Prozent einen sehr kleinen Anteil an Retouren. Und auf dem Gel&amp;auml;nde h&amp;auml;tten wir Platz, um unsere 105 Meter lange Halle noch mal zu spiegeln und weitere 8000 Quadratmeter Lagerfl&amp;auml;che zu realisieren.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Klingt nach gro&amp;szlig;en Pl&amp;auml;nen:&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Die haben wir auch! Wir wollen uns abseits der Ersatzteile f&amp;uuml;r unsere Lafetten, Trailer und Wechselbr&amp;uuml;cken zu einem gro&amp;szlig;en Ersatzteilh&amp;auml;ndler entwickeln. Alles was Bezug zum Nutzfahrzeug hat, etwa Bremsbel&amp;auml;ge, Reifen, Sto&amp;szlig;d&amp;auml;mpfer, wollen wir &amp;uuml;ber kurz oder lang ins Portfolio nehmen. Nur ein Beispiel: Krone verkauft alleine 5000 Reifen unserer Eigenmarke pro Jahr. &amp;Uuml;ber alle Teile gehen aktuell 70 Prozent unserer Lieferungen ins Ausland. Gestern hatten wir die erste Lieferung nach S&amp;uuml;dkorea. Auch Chile war schon dabei. Da ist also noch Luft nach oben.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test + Technik"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.autohaus.de/sixcms/media.php/4903/thumbnails/90003_2018_73_08_I_044-046_Krone_ET-Zentrum_249369_print.15633412.pdf.15633415.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VR Interview,Krone Trailer 1112"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2133079"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"issue_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2133000"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Effizientes Ersatzteilwesen"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-22 15:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-21 12:40:10"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"kicker"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Krone ET-Zentrallager"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mit einem Invest von 8,5 Millionen Euro ordnet Trailerhersteller Krone das Ersatzteilwesen neu. Herzstück ist künftig das ET-Zentrum </span><span class="se">\r\n</span><span class="s2">in Herzlake."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"page_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"44"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Nach den Zugfahrzeugherstellern, die sich neu erfunden haben und immer mehr Services neben ihrem Kernprodukt anbieten, setzen auch die Trailerproduzenten vermehrt auf das Gesch&amp;auml;ft rund um die Hardware. J&amp;uuml;ngster Coup in der Branche: das neue Ersatzteilzentrum der Krone Gruppe in Herzlake, verkehrsg&amp;uuml;nstig an der Europastra&amp;szlig;e 233 gelegen - eine der Hauptverkehrsadern der Region.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Das Investitionsvolumen des modernen Ersatzteil-Distributionszentrums beziffert die Krone-Nutzfahrzeug-Gruppe auf 8,5 Millionen Euro. </span><span class="se">\"</span><span class="s2">Wir setzen mit der Inbetriebnahme des neuen Ersatzteil-Zentrums konsequent unsere definierte Service-Offensive um, festigen unseren Wettbewerbsvorsprung im Ersatzteilgesch&amp;auml;ft und bauen die Teileverf&amp;uuml;gbarkeit f&amp;uuml;r unsere europaweit t&amp;auml;tigen Kunden noch weiter aus</span><span class="se">\"</span><span class="s2">, so Bernard Krone, gesch&amp;auml;ftsf&amp;uuml;hrender Gesellschafter der Krone-Gruppe. </span><span class="se">\"</span><span class="s2">Der Ausbau dieser wichtigen Dienstleistung ist ein zentraler Baustein unserer Zukunftsstrategie.</span><span class="se">\"</span><span class="s2">&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Das neue Lager befindet sich auf einem Areal von 38.000 Quadratmetern - einer Fl&amp;auml;che von rund f&amp;uuml;nfeinhalb Fu&amp;szlig;ballfeldern. Die &amp;uuml;berdachte Lagerfl&amp;auml;che von 8400 Quadratmetern verteilt sich auf zw&amp;ouml;lf Ebenen mit 17.500 Stellpl&amp;auml;tzen f&amp;uuml;r Europaletten sowie 16.000 Beh&amp;auml;lter f&amp;uuml;r Kleinteile. Sollte das Gesch&amp;auml;ft wie erwartet weiter prosperieren, ist ausreichend Fl&amp;auml;che vorhanden, sodass Krone das bereits vorhandene Lager noch ein zweites Mal gespiegelt aufbauen kann.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Aktuell kommissionieren 40 Mitarbeiter monatlich mehr als 23.000 Positionen. Wenn n&amp;ouml;tig, erfolgt der Versand im Nachtsprung oder im definierten Zeitfenster. Zudem bedient das Ersatzteilzentrum wichtige Au&amp;szlig;enstellen in Istanbul, Budapest, Lyon, Skandinavien und im Baltikum. Das Portfolio des Versandzentrums in Herzlake umfasst Ersatzteile f&amp;uuml;r Anh&amp;auml;nger, Aufbauten, Containerfahrgestelle, Pritschen- und Koffersattelauflieger, Fahrzeuge f&amp;uuml;r Kurier-Express-Dienste sowie f&amp;uuml;r die hauseigenen Krone Trailer Achsen. Das neue Zentrallager ist ein Schritt der Krone Gruppe f&amp;uuml;r weiteres Wachstum. Der Umsatz liegt aktuell bei 1,9 Milliarden Euro. In den Megatrends </span><span class="se">\"</span><span class="s2">Zunahme der Weltbev&amp;ouml;lkerung</span><span class="se">\"</span><span class="s2"> sowie </span><span class="se">\"</span><span class="s2">Globale Vernetzung</span><span class="se">\"</span><span class="s2"> und der damit steigenden Nachfrage nach Nahrungs- und Transportmitteln sieht Krone wesentliche Punkte, dass sich der Absatz von Nutzfahrzeugen auch weiterhin positiv entwickeln wird.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Mehr zum Thema finden Sie im Dossier </span><span class="se">\u</span><span class="s2">0084Krone</span><span class="se">\u</span><span class="s2">0093 www.verkehrsrundschau.de/dossiers&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test + Technik"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.autohaus.de/sixcms/media.php/4903/thumbnails/90003_2018_73_08_I_044-046_Krone_ET-Zentrum_249369_print.pdf.15633408.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Trend-Idee Lager Umschlag,Trend-Idee Logistik,Krone Trailer 1112"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2133076"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"issue_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2133000"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"V8-Giganten im Eisduell"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-22 15:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-21 12:39:25"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"kicker"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Scanias V8 im Vergleich"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Im norwegischen Winter treten die beiden stärksten V8 von Scania zum Vergleich an. Obwohl einer schneller ist, gibt es zwei Sieger."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"page_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Es ist angerichtet zum gro&amp;szlig;en V8-Duell: Auf einem Flugplatz im norwegischen Wintersportgebiet Trysil stehen die Kontrahenten noch friedlich nebeneinander. Der rubinrote S 650 in SCR-only-Technologie fordert als zweitst&amp;auml;rkste und modernste Scania-Maschine den saphirblauen S 730 heraus, die aktuelle Top-Motorisierung der Schweden (siehe Kasten oben rechts).&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;An dem grauen Januartag zeigt das Thermometer knapp unter null Grad Celsius, f&amp;uuml;r norwegische Verh&amp;auml;ltnisse fast sommerliche Temperaturen. Dennoch sorgen Schnee- und Eisreste f&amp;uuml;r eine teils schl&amp;uuml;pfrige Fahrbahn. Die Strecke f&amp;uuml;hrt durch eine Schneefurche vom Flugplatz auf die Riksvei 25 Richtung schwedische Grenze. Vorbei an tief verschneiten W&amp;auml;ldern geht es mit Gef&amp;auml;llen zwischen vier und sechs Prozent bergab &amp;uuml;ber den Fluss Klar&amp;auml;lven.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Last verschieben f&amp;uuml;r mehr Grip&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Im Kreisverkehr nach der Br&amp;uuml;cke wird gewendet und wir fahren den gleichen Weg zur&amp;uuml;ck. Die Gef&amp;auml;lle wandeln sich jetzt zu Steigungen, und die beiden Duellanten m&amp;uuml;ssen zeigen, was in ihrem V8 steckt.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Damit das Ganze f&amp;uuml;r die beiden 16-Liter-Aggregate nicht zu leicht wird, sind wir mit den in Norwegen zul&amp;auml;ssigen 50 Tonnen Gesamtgewicht unterwegs.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Dass die Boliden dabei nicht die Traktion verlieren, soll Load-Transfer (Achslastverschiebung) verhindern. &amp;Uuml;ber die Luftfederung kann das System die letzte Achse unserer dreiachsigen Sattelzugmaschinen entlasten und so mehr Druck auf die vordere Antriebsachse bringen. Eine Funktion, die sich im Duellverlauf als n&amp;uuml;tzlich erweist, in Deutschland aber nur eingeschr&amp;auml;nkt erlaubt ist.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Das Getriebe setzt aufs Drehmoment&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Der Favorit mit seinen 730 PS muss vorlegen. Mit dem Dreh am Z&amp;uuml;ndschl&amp;uuml;ssel erwacht der V8 im Blue Safir zum Leben. Sein Leerlaufgrummeln bricht mit der nordischen Stille und f&amp;uuml;llt dezent die Kabine. Entspannt geht es bergab Richtung Kreisverkehr. Entspannt? Angesichts der glitschigen Stra&amp;szlig;enverh&amp;auml;ltnisse nicht wirklich. Der mich begleitende Werksfahrer mahnt zur Zur&amp;uuml;ckhaltung im Umgang mit dem Retarder. Bei zu viel Bremsmoment an den Antriebsachsen faltet sich der Zug zusammen wie ein Zollstock.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Unten angekommen geht es durch den Kreisel, zur&amp;uuml;ck &amp;uuml;ber die Br&amp;uuml;cke, noch einmal links abbiegen - jetzt gilt's. Durchatmen, Fu&amp;szlig; aufs Gas und los. Der V8-Sound wird kerniger, ein Pfeifen k&amp;uuml;ndigt von der Arbeit des Turboladers, das L&amp;auml;mpchen der Antischlupfregelung leuchtet auf und signalisiert, was der Chauffeur l&amp;auml;ngst merkt: Die Zugmaschine schlingert an den Hinterachsen. Fu&amp;szlig; vom Gas, Lenkrad ruhig halten und mit dem Finger auf dem Knopf f&amp;uuml;r Load-Transfer mehr Druck auf die vordere Antriebsachse schicken.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Jetzt zieht der S 730 souver&amp;auml;n den Berg hoch. Bis auf 72 Kilometer pro Stunde im 11. Gang bei 1200 Umdrehungen bringt er es. In der Steigung wechselt Opticruise erst bei 1400 Touren den Gang und damit genau am Ende des Drehzahlbereichs, an dem das Drehmomentmaximum von 3500 Newtonmetern anliegt.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Der Schlussanstieg setzt der Maschine dann aber doch noch zu und im zehnten Gang geht es mit 60 km/h bei 1300 Umdrehungen &amp;uuml;ber die gedachte Ziellinie - ein Schild am Stra&amp;szlig;enrand.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;Der Herausforderer h&amp;auml;lt kurz den Elften&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Danach startet Red Rubin, der Herausforderer, in dem bereits die neue Motorengeneration verbaut ist, seinen Angriff. Die Bergabpassage bleibt wenig &amp;uuml;berraschend wieder ohne Erkenntnisgewinn, welcher V8 die bessere Maschine ist.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Mit der Erfahrung aus Runde eins ist Load-Transfer bereits justiert und der Gasfu&amp;szlig; geht nach dem Abzweig zu Beginn der Steigung sanfter zu Werke. Mit rund 13 von 18 m&amp;ouml;glichen Tonnen presst sich die vordere der beiden Hinterachsen jetzt auf den glatten Fahrbahnbelag. Dennoch flackert das ASR-L&amp;auml;mpchen kurz auf. Danach zieht der 650-PS-Scania sauber die Steigung hoch. Auch er vertraut auf sein Drehmoment und schafft es kurzzeitig in den elften Gang, wenn auch mit ein paar km/h weniger auf der Uhr. Am Ende k&amp;auml;mpft er sich mit 50 km/h bei 1100 Touren im zehnten Gang &amp;uuml;ber die Ziellinie - zweiter Sieger.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;strong&gt;&amp;Uuml;berraschungssieger im Akustikduell&lt;/strong&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Verlierer w&amp;auml;re zu hart. Zum einen musste ich aus Sicherheitsgr&amp;uuml;nden angesichts der zunehmenden Gl&amp;auml;tte in zwei lang gezogenen Rechtskurven bei Gegenverkehr kurz vom Gas. Ein paar Kilometer mehr Geschwindigkeit w&amp;auml;ren also noch drin gewesen, die 60 h&amp;auml;tte der S 650 aber sicher nicht erreicht.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Zum anderen gewinnt er die Sound-Wertung - den neuen Abgassammelrohren sei Dank. Der S 650 klingt lauter, kerniger und damit mehr nach V8 als der vergleichsweise leise S 730, ohne dabei st&amp;ouml;rend laut zu dr&amp;ouml;hnen.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Dass beim S 650 der Bereich des Drehmomentmaximums um 50 Touren nach unten verschoben ist, ist an der Steigung nicht zu merken. Die fehlenden 200 Newtonmeter und die um 80 PS geringere Motorleistung schon. Etwas. Im Alltag f&amp;auml;llt beides nicht wirklich ins Gewicht. Hier punktet der S 650 mit dem moderneren SCR-only-Triebwerk, vermeintlich geringeren Verbrauchswerten und dem besseren V8-Sound.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Alle Tests und Fahrberichte f&amp;uuml;r Abonnenten www.verkehrsrundschau-plus.de&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;div class=</span><span class="se">\"</span><span class="s2">ha-kasten1</span><span class="se">\"</span><span class="s2">&gt;</span><span class="se">\r\n</span><span class="s2">&lt;div class=</span><span class="se">\"</span><span class="s2">title</span><span class="se">\"</span><span class="s2">&gt;</span><span class="se">\r\n</span><span class="s2">&lt;h4&gt;Die neue V8-Generation&lt;/h4&gt;</span><span class="se">\r\n</span><span class="s2">&lt;h4&gt;Das hat sich ge&amp;auml;ndert&lt;/h4&gt;</span><span class="se">\r\n</span><span class="s2">&lt;/div&gt;</span><span class="se">\r\n</span><span class="s2">&lt;div class=</span><span class="se">\"</span><span class="s2">content</span><span class="se">\"</span><span class="s2">&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Vergangenen Sommer hat Scania die neue Generation V8-Motoren in den Leistungsstufen 520, 580, 650 und 730 PS vorgestellt. Wobei bei der Top-Motorisierung nicht alle Neuerungen &amp;uuml;bernommen wurden. F&amp;uuml;r sie wirbt Scania mit einem daher Minderverbrauch von 5,5 Prozent, w&amp;auml;hrend dieser bei den anderen Einstellungen zwischen 7 und 10 Prozent liegen soll. Der Hauptgrund f&amp;uuml;r die niedrigeren Verbr&amp;auml;uche ist die im Gegensatz zur 730-PS-Version fehlende Abgasr&amp;uuml;ckf&amp;uuml;hrung. Zudem arbeiten die Motoren jetzt mit einem Twin-Scroll-Turbolader mit fester Turbinengeometrie (FGT). Das soll robuster und leichter sein als der Vorg&amp;auml;nger mit variabler Geometrie. Weitere Ver&amp;auml;nderungen betreffen das Ansaug- und Einspritzverfahren sowie die beweglichen Motorenteile, die weniger Reibung erzeugen. Luftkompressor und Dieselpumpe arbeiten jetzt bedarfsgesteuert w&amp;auml;hrend ein Thermostat die &amp;Ouml;lpumpe regelt. sv&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;/div&gt;</span><span class="se">\r\n</span><span class="s2">&lt;/div&gt;</span><span class="se">\r\n</span><span class="s2">&lt;div class=</span><span class="se">\"</span><span class="s2">ha-kasten2</span><span class="se">\"</span><span class="s2">&gt;</span><span class="se">\r\n</span><span class="s2">&lt;div class=</span><span class="se">\"</span><span class="s2">title</span><span class="se">\"</span><span class="s2">&gt;</span><span class="se">\r\n</span><span class="s2">&lt;h4&gt;Fazit&lt;/h4&gt;</span><span class="se">\r\n</span><span class="s2">&lt;h4&gt;Luxusprobleme&lt;/h4&gt;</span><span class="se">\r\n</span><span class="s2">&lt;/div&gt;</span><span class="se">\r\n</span><span class="s2">&lt;div class=</span><span class="se">\"</span><span class="s2">content</span><span class="se">\"</span><span class="s2">&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;</span><span class="se">\"</span><span class="s2">Zwei Seelen wohnen, ach! in meiner Brust</span><span class="se">\"</span><span class="s2">, hei&amp;szlig;t es in Goethes Faust. Meine Fahrer- Seele sagt: Nimm den mit 730 PS - das Leistungsplus gegen&amp;uuml;ber dem Motor mit 650 PS bringt einfach noch mehr Fahrspa&amp;szlig;. Die Unternehmer-Seele sagt: Nimm den mit 650 PS - es ist das modernere Aggregat und die fehlende Leistung ist in der Praxis meist irrelevant. H&amp;auml;tte ich eine dritte, spa&amp;szlig;frei-ehrliche Seele, w&amp;uuml;rde die sagen: Im 40-Tonnen-Fernverkehr ist das ein Luxusproblem, denn f&amp;uuml;r den braucht niemand 650 oder 730 PS.serge.voigt@springernature.comSerge Voigt, Redakteur f&amp;uuml;r Test und Technik&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;/div&gt;</span><span class="se">\r\n</span><span class="s2">&lt;/div&gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test + Technik"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.autohaus.de/sixcms/media.php/4903/thumbnails/90003_2018_73_08_I_040-043_Scania_gegen_Scania_250049_print.pdf.15633401.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Markt Lkw-Landverkehr &amp; Stückgut,Lkw 7,5 t und mehr,VW Scania NFZ und Services 1111"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Magazine Articles belonging to a given Magazine Issue sorted by change date</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/magazine_article/by_issue/&lt;ISSUE_ID&gt;</code></p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>issue_id</td>
+<td>0</td>
+<td>Id of a Magazine Issue</td>
+</tr>
+</tbody></table>
+<h1 id='video'>Video</h1><h2 id='get-all-video-topics-from-given-timestamp'>Get All Video Topics from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/video-topic/ids/1501545600"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"2062018"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2053647"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2048136"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2048134"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2052406"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2048124"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Video Topics with change dates greater than give timestamp.</p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/video-topic/ids/&lt;TIMESTAMP&gt;</code></p>
+<h3 id='query-parameters-5'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>timestamp</td>
+<td>0</td>
+<td>Unix Timestamp to start with</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-video-topic'>Get a Specific Video Topic</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/video-topic/detail/2062018"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062018"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Datenschutz - Die neuen Herausforderungen"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Videoschulungen zum Webinar"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-06 16:52:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-07 09:50:26"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"In unserer Videoreihe </span><span class="se">\"</span><span class="s2">Datenschutz - Die neuen Herausforderungen</span><span class="se">\"</span><span class="s2"> werden Ihnen anhand von sechs anschaulichen Videos die wichtigsten Änderungen der Datenschutzgrundverordnung näher gebracht. Gültig ab 25.5.2018, können Sie hier erfahren, wie Sie sich vorbereiten können, was sich geändert hat und was Sie auch bisher schon beachten mussten. Neuerungen im Datenschutzrecht, Auswirkungen auf die Verarbeitung von Daten und das Direktmarketing sowie Pflichten für Unternehmer werden erklärt und wichtige Fragen zum Thema von unserem Fachexperten beantwortet. "</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;In unserer Videoreihe </span><span class="se">\"</span><span class="s2">Datenschutz - Die neuen Herausforderungen</span><span class="se">\"</span><span class="s2"> werden Ihnen anhand von 6 anschaulichen Videos die wichtigsten &amp;Auml;nderungen der Datenschutzgrundverordnung n&amp;auml;her gebracht. G&amp;uuml;ltig ab 25.5.2018, k&amp;ouml;nnen Sie hier erfahren, wie Sie sich vorbereiten k&amp;ouml;nnen, was sich ge&amp;auml;ndert hat und was Sie auch bisher schon beachten mussten. Neuerungen im Datenschutzrecht, Auswirkungen auf die Verarbeitung von Daten und das Direktmarketing sowie Pflichten f&amp;uuml;r Unternehmer werden erkl&amp;auml;rt und wichtige Fragen zum Thema von unserem Fachexperten beantwortet.&amp;nbsp;&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/5709/Datenschutz_Trueffelpix_stockadobe1920.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image_copyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Trueffelpix/stock.adobe.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"video"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062027"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Datenschutz - Teil 1 - Einführung"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-06 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-07 09:49:13"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Die Videoreihe </span><span class="se">\"</span><span class="s2">Datenschutz - Die neuen Herausforderungen</span><span class="se">\"</span><span class="s2"> besteht aus sechs Teilen und befasst sich mit Ihren veränderten Pflichten und Aufgaben als Unternehmer laut Datenschutzgrundverordnung. In Teil 1 gibt es eine generelle Einführung in das Thema und die weiteren Videos dazu."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"video_topic_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"video_html"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;iframe src=</span><span class="se">\"</span><span class="s2">https://player.vimeo.com/video/254501871?title=0&amp;byline=0&amp;portrait=0&amp;color=e22713</span><span class="se">\"</span><span class="s2"> width=</span><span class="se">\"</span><span class="s2">1055</span><span class="se">\"</span><span class="s2"> height=</span><span class="se">\"</span><span class="s2">593</span><span class="se">\"</span><span class="s2"> frameborder=</span><span class="se">\"</span><span class="s2">0</span><span class="se">\"</span><span class="s2"> title=</span><span class="se">\"</span><span class="s2">DSGVO-Teil1-Einf&amp;uuml;hrung</span><span class="se">\"</span><span class="s2"> webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"length"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02:20"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/893/681665875_960.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recht Transport und Spedition"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sorting_index"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062029"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Datenschutz - Teil 2 - Neues Datenschutzrecht"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-06 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-07 10:23:09"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Die Videoreihe </span><span class="se">\"</span><span class="s2">Datenschutz - Die neuen Herausforderungen</span><span class="se">\"</span><span class="s2"> besteht aus sechs Teilen und befasst sich mit Ihren veränderten Pflichten und Aufgaben als Unternehmer laut Datenschutzgrundverordnung. In Teil 2 wird die neue Verordnung vorgestellt und geklärt, was sich jetzt für Sie verändert und was bleibt wie bisher."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"video_topic_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"video_html"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;iframe src=</span><span class="se">\"</span><span class="s2">https://player.vimeo.com/video/254502786?title=0&amp;byline=0&amp;portrait=0&amp;color=e22713</span><span class="se">\"</span><span class="s2"> width=</span><span class="se">\"</span><span class="s2">1055</span><span class="se">\"</span><span class="s2"> height=</span><span class="se">\"</span><span class="s2">593</span><span class="se">\"</span><span class="s2"> frameborder=</span><span class="se">\"</span><span class="s2">0</span><span class="se">\"</span><span class="s2"> title=</span><span class="se">\"</span><span class="s2">DSGVO-Teil2-Neues Datenschutzrecht</span><span class="se">\"</span><span class="s2"> webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"length"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10:48"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/893/681845638_960.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recht Transport und Spedition"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sorting_index"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062030"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Datenschutz - Teil 3 - Datenverarbeitung"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-06 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-07 10:23:25"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Die Videoreihe </span><span class="se">\"</span><span class="s2">Datenschutz - Die neuen Herausforderungen</span><span class="se">\"</span><span class="s2"> besteht aus sechs Teilen und befasst sich mit Ihren veränderten Pflichten und Aufgaben als Unternehmer laut Datenschutzgrundverordnung. In Teil 3 erfahren Sie, wann Daten verarbeitet werden dürfen und worauf Sie dabei achten müssen."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"video_topic_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"video_html"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;iframe src=</span><span class="se">\"</span><span class="s2">https://player.vimeo.com/video/254500824?title=0&amp;byline=0&amp;portrait=0&amp;color=e22713</span><span class="se">\"</span><span class="s2"> width=</span><span class="se">\"</span><span class="s2">1055</span><span class="se">\"</span><span class="s2"> height=</span><span class="se">\"</span><span class="s2">593</span><span class="se">\"</span><span class="s2"> frameborder=</span><span class="se">\"</span><span class="s2">0</span><span class="se">\"</span><span class="s2"> title=</span><span class="se">\"</span><span class="s2">DSGVO-Teil3-Datenverarbeitung</span><span class="se">\"</span><span class="s2"> webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"length"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14:17"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/893/681665498_960.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recht Transport und Spedition"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sorting_index"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062031"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Datenschutz - Teil 4 - Direktmarketing"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-06 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-07 09:49:29"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Die Videoreihe </span><span class="se">\"</span><span class="s2">Datenschutz - Die neuen Herausforderungen</span><span class="se">\"</span><span class="s2"> besteht aus sechs Teilen und befasst sich mit Ihren veränderten Pflichten und Aufgaben als Unternehmer laut Datenschutzgrundverordnung. Teil 4 befasst sich mit dem Thema Direktmarketing - was ist erlaubt, was nicht."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"video_topic_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"video_html"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;iframe src=</span><span class="se">\"</span><span class="s2">https://player.vimeo.com/video/254501630?title=0&amp;byline=0&amp;portrait=0&amp;color=e22713</span><span class="se">\"</span><span class="s2"> width=</span><span class="se">\"</span><span class="s2">1055</span><span class="se">\"</span><span class="s2"> height=</span><span class="se">\"</span><span class="s2">593</span><span class="se">\"</span><span class="s2"> frameborder=</span><span class="se">\"</span><span class="s2">0</span><span class="se">\"</span><span class="s2"> title=</span><span class="se">\"</span><span class="s2">DSGVO-Teil4-Direktmarketing</span><span class="se">\"</span><span class="s2"> webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"length"</span><span class="p">:</span><span class="w"> </span><span class="s2">"05:25"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/893/681665760_960.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recht Transport und Spedition"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sorting_index"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062032"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Datenschutz - Teil 5 - Neue Pflichten für Unternehmen"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-06 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-07 10:23:32"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Die Videoreihe </span><span class="se">\"</span><span class="s2">Datenschutz - Die neuen Herausforderungen</span><span class="se">\"</span><span class="s2"> besteht aus sechs Teilen und befasst sich mit Ihren veränderten Pflichten und Aufgaben als Unternehmer laut Datenschutzgrundverordnung. In Teil 5 stellt unser Fachexperte die neuen Pflichten für Unternehmen vor, die mit der Verordnung einhergehen."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"video_topic_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"video_html"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;iframe src=</span><span class="se">\"</span><span class="s2">https://player.vimeo.com/video/254503182?title=0&amp;byline=0&amp;portrait=0&amp;color=e22713</span><span class="se">\"</span><span class="s2"> width=</span><span class="se">\"</span><span class="s2">1055</span><span class="se">\"</span><span class="s2"> height=</span><span class="se">\"</span><span class="s2">593</span><span class="se">\"</span><span class="s2"> frameborder=</span><span class="se">\"</span><span class="s2">0</span><span class="se">\"</span><span class="s2"> title=</span><span class="se">\"</span><span class="s2">DSGVO-Teil5-Pflichten</span><span class="se">\"</span><span class="s2"> webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"length"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15:35"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/893/681845567_960.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recht Transport und Spedition"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sorting_index"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062034"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Datenschutz - Teil 6 - Fragen und Antworten"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-06 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-07 10:22:51"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Die Videoreihe </span><span class="se">\"</span><span class="s2">Datenschutz - Die neuen Herausforderungen</span><span class="se">\"</span><span class="s2"> besteht aus sechs Teilen und befasst sich mit Ihren veränderten Pflichten und Aufgaben als Unternehmer laut Datenschutzgrundverordnung. Im 6. und letzten Teil werden Fragen und Antworten zum Thema und den vorhergehenden Videos gegeben."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"video_topic_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062018"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"video_html"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;iframe src=</span><span class="se">\"</span><span class="s2">https://player.vimeo.com/video/254501964?title=0&amp;byline=0&amp;portrait=0&amp;color=e22713</span><span class="se">\"</span><span class="s2"> width=</span><span class="se">\"</span><span class="s2">1055</span><span class="se">\"</span><span class="s2"> height=</span><span class="se">\"</span><span class="s2">593</span><span class="se">\"</span><span class="s2"> frameborder=</span><span class="se">\"</span><span class="s2">0</span><span class="se">\"</span><span class="s2"> title=</span><span class="se">\"</span><span class="s2">DSGVO-Teil6-Fragen</span><span class="se">\"</span><span class="s2"> webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"length"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16:03"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/893/681846040_960.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recht Transport und Spedition"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sorting_index"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"documents"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific Video Topic.</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/video-topic/detail/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the Video Topic to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-videos-from-given-timestamp'>Get All Videos from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/video/ids/1501545600"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"2062032"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2062030"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2062029"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2062034"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2062031"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2062027"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2058281"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2053684"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2053682"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2053680"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2053679"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2053671"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2053670"</span><span class="p">,</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Videos with change dates greater than give timestamp.</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/video/ids/&lt;TIMESTAMP&gt;</code></p>
+<h3 id='query-parameters-6'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>timestamp</td>
+<td>0</td>
+<td>Unix Timestamp to start with</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-video'>Get a Specific Video</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/video/detail/2062032"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062032"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Datenschutz - Teil 5 - Neue Pflichten für Unternehmen"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-06 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-07 10:23:32"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Die Videoreihe </span><span class="se">\"</span><span class="s2">Datenschutz - Die neuen Herausforderungen</span><span class="se">\"</span><span class="s2"> besteht aus sechs Teilen und befasst sich mit Ihren veränderten Pflichten und Aufgaben als Unternehmer laut Datenschutzgrundverordnung. In Teil 5 stellt unser Fachexperte die neuen Pflichten für Unternehmen vor, die mit der Verordnung einhergehen."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"video_topic_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2062018"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"video_html"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;iframe src=</span><span class="se">\"</span><span class="s2">https://player.vimeo.com/video/254503182?title=0&amp;byline=0&amp;portrait=0&amp;color=e22713</span><span class="se">\"</span><span class="s2"> width=</span><span class="se">\"</span><span class="s2">1055</span><span class="se">\"</span><span class="s2"> height=</span><span class="se">\"</span><span class="s2">593</span><span class="se">\"</span><span class="s2"> frameborder=</span><span class="se">\"</span><span class="s2">0</span><span class="se">\"</span><span class="s2"> title=</span><span class="se">\"</span><span class="s2">DSGVO-Teil5-Pflichten</span><span class="se">\"</span><span class="s2"> webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"length"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15:35"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/893/681845567_960.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recht Transport und Spedition"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sorting_index"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific Video.</p>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/video/detail/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the Video to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='deleted-objects'>Deleted Objects</h1><h2 id='get-all-deleted-objects-from-given-timestamp'>Get All Deleted Objects from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/deleted/1501545600"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2147386</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"content_class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrVideoTopic"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"deleted_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-30T13:54:03+0200"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2147385</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"content_class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrVideo"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"deleted_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-30T13:52:29+0200"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2147384</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"content_class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrMagazineIssue"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"deleted_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-30T13:50:01+0200"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2147383</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"content_class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrMagazineArticle"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"deleted_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-30T13:49:42+0200"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2147381</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"content_class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrNews"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"deleted_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-30T13:44:44+0200"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Deleted Objects with deleted dates greater than given timestamp.</p>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/deleted/&lt;TIMESTAMP&gt;</code></p>
+<h3 id='query-parameters-7'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>timestamp</td>
+<td>0</td>
+<td>Unix Timestamp to start with</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
 
 <p>The Kittn API uses the following error codes:</p>
 
@@ -445,7 +876,7 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>Bad Request -- Your request is invalid.</td>
 </tr>
 <tr>
 <td>401</td>
@@ -493,9 +924,6 @@ Remember — a happy kitten is an authenticated kitten!
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
