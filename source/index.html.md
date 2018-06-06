@@ -582,6 +582,1087 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the Video to retrieve
 
+# Insolvency Database
+
+## Get All Insolvency Companies from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/insolvency-company/ids/1501545600"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "2162479",
+    "2162469",
+    "2162468",
+    "2162467",
+    "2162466",
+    "2162465",
+    "2162458",
+    "2162456"
+]
+```
+
+This endpoint retrieves all Companies with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/insolvency-company/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Insolvency Company
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/insolvency-company/detail/2162466"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2162466",
+    "title": "Adler Transport UG",
+    "online_date": "2018-05-08 00:00:00",
+    "offline_date": "9999-12-31 00:00:00",
+    "change_date": "2018-05-08 09:46:31",
+    "datum": "2018-05-02",
+    "court": "Amtsgericht Montabaur",
+    "zip": "56244 ",
+    "location": "Leuterod",
+    "status": "Verfahren eröffnet",
+    "statusId": "1019476",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Insolvency Company.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/insolvency-company/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Company to retrieve
+
+## Get All Stati from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/insolvency-status/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "1019477",
+    "1019478",
+    "1019476",
+    "1019475"
+]
+```
+
+This endpoint retrieves all Stati with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/insolvency-status/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a Specific Status
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/insolvency-status/detail/1019477"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "1019477",
+    "title": "Mangels Masse abgelehnt/eingestellt",
+    "online_date": "2011-04-12 14:46:00",
+    "offline_date": "9999-12-31 00:00:00",
+    "change_date": "2011-07-25 15:41:00",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Company.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/insolvency-status/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Status to retrieve
+
+# Test Database
+
+## Get All Test DB Entries from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/test-db-entry/ids/1501545600"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "2162884",
+    "2158819",
+    "2156107",
+    "2156104",
+    "2151383",
+    "2147099",
+    "2141685"
+]
+```
+
+This endpoint retrieves all Test DB Entries with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/test-db-entry/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Test DB Entry
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/test-db-entry/detail/2162884"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2162884",
+    "title": "Scania G 450 XT 8x4: King of Construction?",
+    "online_date": "2018-05-10 15:00:00",
+    "offline_date": "9999-12-31 00:00:00",
+    "change_date": "2018-05-11 13:01:58",
+    "issue": "19",
+    "teaser": "Mit dem G 450 XT 8x4 tritt der erste Kipper aus Scanias neuer Baufahrzeugreihe zum Test an. Ein neues System soll den Verbrauch senken.",
+    "issue_date": "2018-05-11",
+    "test_db_category": [
+        {
+            "id": "1019435",
+            "title": "Fahrzeugtest",
+            "online_date": "2010-08-03 16:19:00",
+            "offline_date": "9999-12-31 00:00:00",
+            "change_date": "2011-04-12 14:03:57",
+            "published": 1
+        }
+    ],
+    "test_db_vehicle_category": [
+        {
+            "id": "958466",
+            "title": "LKW",
+            "online_date": "2010-08-03 16:19:00",
+            "offline_date": "9999-12-31 00:00:00",
+            "change_date": "2010-08-03 16:19:35",
+            "published": 1
+        }
+    ],
+    "test_db_manufacturer": [
+        {
+            "id": "958482",
+            "title": "Scania",
+            "online_date": "2010-08-03 16:19:00",
+            "offline_date": "9999-12-31 00:00:00",
+            "change_date": "2010-08-03 16:19:36",
+            "published": 1
+        }
+    ],
+    "model_1": "G 450 XT 8x4",
+    "pdf_upload": "https://media1.verkehrsrundschau.de/sixcms/media.php/4395/90003_2018_73_19_I_040-043_Scania_G_450_XT_268424_print.pdf",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Test DB Entry.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/test-db-entry/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Entry to retrieve
+
+## Get All Test DB Forklifts from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/test-db-forklift/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "1790220",
+    "1653013",
+    "1652651",
+    "1366377",
+    "1360966",
+    "1357965",
+    "1284950",
+    "1187198",
+    "1176976",
+    "1176925",
+    "1121719"
+]
+```
+
+This endpoint retrieves all Forklifts with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/test-db-forklift/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Test DB Forklift
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/test-db-forklift/detail/1790220"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "1790220",
+    "title": "Toyota Traigo 48-16 Li-Ion: Der Schnelllader unter den Staplern",
+    "online_date": "2016-05-03 11:19:00",
+    "offline_date": "9999-12-31 00:00:00",
+    "change_date": "2016-09-15 11:52:00",
+    "teaser": "Wie gut sind Bedienung, Fahrleistung und Energieverbrauch des 1,6 Tonnen Elektro-Frontstapler von Toyota in der Praxis? Und, welchen Vorteil bringt die Lithium-Ionen-Batterie? Antworten liefert der Test des Toyota Traigo 48-16 Li-Ion. Mit dem kompletten Test als PDF-Download.",
+    "text": "<p>Im Staplertest der VerkehrsRundschau hat der Traigo 48-16 Li-Ion von Toyota mit der Note &bdquo;gut&ldquo; (1,9) abgeschnitten. Technischer Leckerbissen des Fahrzeugs war seine f&uuml;r Frontstapler noch untypische Lithium-Ionen-Batterie, welche die Ladezeiten deutlich verk&uuml;rzt und so im Mehrschichtbetrieb den Batteriewechsel &uuml;berfl&uuml;ssig machen kann. Der Dreirad-Elektrofrontstapler hebt Lasten von bis zu 1,6 Tonnen.<!--?xml:namespace prefix = \"o\" ns = \"urn:schemas-microsoft-com:office:office\" /--></p>\r\n<p>Pluspunkte sammelte der in Italien gefertigte Japaner bei den drei Testfahrern unter anderem mit seiner wartungsfreien Batterie, die nicht gewechselt werden muss, mit dem serienm&auml;&szlig;igen System f&uuml;r mehr Fahrstabilit&auml;t sowie dem einfachen Zugang zu allen wichtigen Komponenten.</p>\r\n<p>Weniger &uuml;berzeugt haben dagegen die Platzierung des Schalters f&uuml;r den Fahrtrichtungswechsel, die fehlenden Ablagem&ouml;glichkeiten f&uuml;r Fahrerutensilien und die etwas ungleichen Spaltma&szlig;e in der Seitenverkleidung.</p>\r\n<p>Der Stapler musste den VerkehrsRundschau-Testparcours im Leistungsmodus absolvieren. Mit 33 Minuten und 44 Sekunden erzielte der Traigo zwar nur eine ordentliche Zeit beim Be- und Entladung eines Sattelaufliegers mit 32 Europaletten. Daf&uuml;r verursacht die moderne Batterietechnik rekordverd&auml;chtig geringe Energiekosten in H&ouml;he von 22 Cent.</p>\r\n<p><a href=\"http://www.verkehrsrundschau.de/fm/3576/VR_Test_Toyota_Traigo48I.pdf\" target=\"_Blank\" title=\"VR-Staplertest: Toyota Traigo 48-16 Li-Ion\">Klicken Sie hier, um den gesamten Test als PDF-Datei herunterzuladen.</a>&nbsp; (sv)</p>",
+    "image": "https://media1.verkehrsrundschau.de/sixcms/media.php/4494/VR_Test_Toyota_Traigo48.jpg",
+    "image_copyright": "VerkehrsRundschau/Serge Voigt",
+    "image_caption": "<p>Die Batterie des Staplers ist schneller aufgeladen als ein Smartphone</p>",
+    "attachments": [
+        {
+            "file": "https://media1.verkehrsrundschau.de/fm/3576/VR_Test_Toyota_Traigo48I.pdf",
+            "title": "VR_Test_Toyota_Traigo48"
+        }
+    ],
+    "issue_date": "2015-05-01",
+    "test_db_category": [
+        {
+            "id": "1019435",
+            "title": "Fahrzeugtest",
+            "online_date": "2010-08-03 16:19:00",
+            "offline_date": "9999-12-31 00:00:00",
+            "change_date": "2011-04-12 14:03:57",
+            "published": 1
+        }
+    ],
+    "test_db_vehicle_category": [
+        {
+            "id": "1817226",
+            "title": "Gabelstapler",
+            "online_date": "2016-08-01 12:55:00",
+            "offline_date": "9999-12-31 00:00:00",
+            "change_date": "2016-08-01 12:55:40",
+            "published": 1
+        }
+    ],
+    "test_db_manufacturer": [
+        {
+            "id": "1142326",
+            "title": "Toyota",
+            "online_date": "2012-07-27 13:45:00",
+            "offline_date": "9999-12-31 00:00:00",
+            "change_date": "2012-07-27 13:45:19",
+            "published": 1
+        }
+    ],
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Test DB Forklift.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/test-db-forklift/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Test DB Forklift to retrieve
+
+## Get All Test DB Manufacturer from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/test-db-manufacturer/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "2046383",
+    "2019079",
+    "2019078",
+    "2019077",
+    "2019076",
+    "2019075",
+    "2013540"
+]
+```
+
+This endpoint retrieves all Test DB Manufacturer with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/test-db-manufacturer/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Test DB Manufacturer
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/test-db-manufacturer/detail/2046383"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2046383",
+    "title": "Xetto",
+    "online_date": "2017-12-14 09:59:00",
+    "offline_date": "9999-12-31 00:00:00",
+    "change_date": "2017-12-14 10:00:27",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Test DB Manufacturer.
+
+## Get All Test DB Vehicle Categories from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/test-db-vehicle-category/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "1817226",
+    "1026105",
+    "1001427",
+    "958507",
+    "958466"
+]
+```
+
+This endpoint retrieves all Test DB Vehicle Categories with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/test-db-vehicle-category/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Test DB Vehicle Category
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/test-db-vehicle-category/detail/1817226"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "1817226",
+    "title": "Gabelstapler",
+    "online_date": "2016-08-01 12:55:00",
+    "offline_date": "9999-12-31 00:00:00",
+    "change_date": "2016-08-01 12:55:40",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Test DB Vehicle Category.
+
+## Get All Test DB Vehicle Categories from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/test-db-vehicle-category/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "1817226",
+    "1026105",
+    "1001427",
+    "958507",
+    "958466"
+]
+```
+
+This endpoint retrieves all Test DB Vehicle Categories with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/test-db-vehicle-category/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Test DB Vehicle Category
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/test-db-vehicle-category/detail/1817226"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "1817226",
+    "title": "Gabelstapler",
+    "online_date": "2016-08-01 12:55:00",
+    "offline_date": "9999-12-31 00:00:00",
+    "change_date": "2016-08-01 12:55:40",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Test DB Vehicle Category.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/test-db-vehicle-category/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the  Test DB Vehicle Category to retrieve
+
+# Courses
+## Get All courses from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "2164840",
+    "2164820"
+]
+```
+
+This endpoint retrieves all Courses with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Course
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course/detail/2164840"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2164840",
+    "online_date": "2018-05-16 00:00:00",
+    "change_date": "2018-05-16 15:57:51",
+    "title": "Test2",
+    "author": [
+        {
+            "id": "2164816",
+            "online_date": "2018-05-16 15:40:00",
+            "change_date": "2018-05-16 15:40:10",
+            "title": "Hans Meiser",
+            "published": 1
+        }
+    ],
+    "is_credit_package_required": 1,
+    "has_certificate": 1,
+    "certificate_template": "VerkehrsRundschau plus",
+    "credit_cost": "7",
+    "is_unlock_modules_one_after_one": 1,
+    "retries_final_test": "3",
+    "goals": "Weiter als 2 Meter springen.\r\nKugelstoßen Weltrekord.\r\n",
+    "target_audience": "Weitspringer, Kugelstoßer",
+    "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    "image_url": "https://media1.verkehrsrundschau.de/sixcms/media.php/2732/traumphase_by_markuszeller-dc1821o.png.jpg",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Course.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the  Course to retrieve
+
+## Get All Course Authors from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course-author/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "2164817",
+    "2164816"
+]
+```
+
+This endpoint retrieves all Course Authors with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course-author/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Course Author
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course-author/detail/2164817"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2164817",
+    "online_date": "2018-05-16 15:40:00",
+    "change_date": "2018-05-16 15:40:31",
+    "title": "Olleg Bollek",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Course Author.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course-author/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the  Course Author to retrieve
+
+
+## Get All Course Languages from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course-language/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "2164813",
+    "2164812"
+]
+```
+
+This endpoint retrieves all Course Languages with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course-language/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Course Language
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course-language/detail/2164817"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2164813",
+    "online_date": "2018-05-16 15:30:00",
+    "change_date": "2018-05-16 15:30:02",
+    "title": "Deutsch",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Course Language.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course-language/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the  Course Language to retrieve
+
+
+## Get All Course Modules from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course-module/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "2164838",
+    "2164833"
+]
+```
+
+This endpoint retrieves all Course Modules with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course-module/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Course Module
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course-module/detail/2164838"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2164838",
+    "online_date": "2018-05-16 15:56:00",
+    "change_date": "2018-05-16 15:57:44",
+    "title": "Hui Boo",
+    "text": "Ich bin ein Test",
+    "type": "Video",
+    "is_final_test": 1,
+    "translations": [
+        {
+            "id": "2164836",
+            "online_date": "2018-05-16 15:57:00",
+            "change_date": "2018-05-16 15:57:40",
+            "title": "Testing the honk",
+            "video": {
+                "id": "2164834",
+                "title": "Honk",
+                "online_date": "2018-05-16 00:00:00",
+                "change_date": "2018-05-16 15:50:09",
+                "video_html": "<iframe src=\"https://player.vimeo.com/video/268216832?title=0&byline=0&portrait=0&color=e22713&app_id=122963\" width=\"1055\" height=\"593\" frameborder=\"0\" title=\"Why Are You Honking?\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+                "length": "05:26",
+                "image": "https://media1.verkehrsrundschau.de/sixcms/media.php/5827/700619362_960.jpg",
+                "published": 1
+            },
+            "wbt_upload": "",
+            "language": {
+                "id": "2164812",
+                "online_date": "2018-05-16 15:29:00",
+                "change_date": "2018-05-16 15:29:55",
+                "title": "Englisch",
+                "published": 1
+            },
+            "published": 1
+        },
+        {
+            "id": "2164837",
+            "online_date": "2018-05-16 15:57:00",
+            "change_date": "2018-05-16 15:57:44",
+            "title": "I like the Erdbeerchen",
+            "video": {
+                "id": "2164830",
+                "title": "Erdbeerchen",
+                "online_date": "2018-05-16 00:00:00",
+                "change_date": "2018-05-16 15:48:53",
+                "video_html": "<iframe src=\"https://player.vimeo.com/video/191887252?title=0&byline=0&portrait=0&color=e22713&app_id=122963\" width=\"1055\" height=\"593\" frameborder=\"0\" title=\"Szagos H&ouml;rigekk&oacute;k - Eper (Strawberry)\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+                "length": "02:05",
+                "image": "https://media1.verkehrsrundschau.de/sixcms/media.php/5827/700544898_960.jpg",
+                "published": 1
+            },
+            "wbt_upload": "",
+            "language": {
+                "id": "2164812",
+                "online_date": "2018-05-16 15:29:00",
+                "change_date": "2018-05-16 15:29:55",
+                "title": "Englisch",
+                "published": 1
+            },
+            "alt_title": "Strawberries",
+            "alt_text": "They are damn tasty.",
+            "published": 1
+        }
+    ],
+    "sorting_index": 0,
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Course Module.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course-module/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the  Course Module to retrieve
+
+==================
+## Get All Course Translations from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course-translation/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "2164837",
+    "2164836",
+    "2164832"
+]
+```
+
+This endpoint retrieves all Course Translations with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course-translation/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Course Translation
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course-translation/detail/2164817"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2164837",
+    "online_date": "2018-05-16 15:57:00",
+    "change_date": "2018-05-16 15:57:44",
+    "title": "I like the Erdbeerchen",
+    "video": {
+        "id": "2164830",
+        "title": "Erdbeerchen",
+        "online_date": "2018-05-16 00:00:00",
+        "change_date": "2018-05-16 15:48:53",
+        "video_html": "<iframe src=\"https://player.vimeo.com/video/191887252?title=0&byline=0&portrait=0&color=e22713&app_id=122963\" width=\"1055\" height=\"593\" frameborder=\"0\" title=\"Szagos H&ouml;rigekk&oacute;k - Eper (Strawberry)\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+        "length": "02:05",
+        "image": "https://media1.verkehrsrundschau.de/sixcms/media.php/5827/700544898_960.jpg",
+        "published": 1
+    },
+    "wbt_upload": "",
+    "language": {
+        "id": "2164812",
+        "online_date": "2018-05-16 15:29:00",
+        "change_date": "2018-05-16 15:29:55",
+        "title": "Englisch",
+        "published": 1
+    },
+    "alt_title": "Strawberries",
+    "alt_text": "They are damn tasty.",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Course Translation.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course-translation/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the  Course Translation to retrieve
+
+## Get All Course Videos from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course-video/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "2164834",
+    "2164830"
+]
+```
+
+This endpoint retrieves all Course Videos with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course-video/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Course Video
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course-video/detail/2164834"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2164834",
+    "title": "Honk",
+    "online_date": "2018-05-16 00:00:00",
+    "change_date": "2018-05-16 15:50:09",
+    "video_html": "<iframe src=\"https://player.vimeo.com/video/268216832?title=0&byline=0&portrait=0&color=e22713&app_id=122963\" width=\"1055\" height=\"593\" frameborder=\"0\" title=\"Why Are You Honking?\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+    "length": "05:26",
+    "image": "https://media1.verkehrsrundschau.de/sixcms/media.php/5827/700619362_960.jpg",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Course Video.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course-video/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the  Course Video to retrieve
+
+==================
+## Get All Course Video from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course-author/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "2164817",
+    "2164816"
+]
+```
+
+This endpoint retrieves all Course Authors with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course-author/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Course
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/course-author/detail/2164817"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2164817",
+    "online_date": "2018-05-16 15:40:00",
+    "change_date": "2018-05-16 15:40:31",
+    "title": "Olleg Bollek",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Course Author.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/course-author/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the  Course Author to retrieve
+
+==================
+
 # Deleted Objects
 
 ## Get All Deleted Objects from given timestamp
