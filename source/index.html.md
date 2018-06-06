@@ -1599,10 +1599,11 @@ Parameter | Description
 ID | The ID of the  Course Video to retrieve
 
 ==================
-## Get All Course Video from given timestamp
+# Key Figure
+## Get All Key Figure Overviews from given timestamp
 
 ```shell
-curl "http://rest-api.verkehrsrundschau.de/course-author/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+curl "http://rest-api.verkehrsrundschau.de/keyfigure-overview/ids/2"  -H "X-Auth-Token: meowmeowmeow"
 ```
 
 
@@ -1610,16 +1611,15 @@ curl "http://rest-api.verkehrsrundschau.de/course-author/ids/2"  -H "X-Auth-Toke
 
 ```json
 [
-    "2164817",
-    "2164816"
+    "2167846"
 ]
 ```
 
-This endpoint retrieves all Course Authors with change dates greater than give timestamp.
+This endpoint retrieves all Key Figure Overviews with change dates greater than give timestamp.
 
 ### HTTP Request
 
-`GET http://rest-api.verkehrsrundschau.de/course-author/ids/<TIMESTAMP>`
+`GET http://rest-api.verkehrsrundschau.de/keyfigure-overview/ids/<TIMESTAMP>`
 
 ### Query Parameters
 
@@ -1628,11 +1628,132 @@ Parameter | Default | Description
 timestamp | 0 | Unix Timestamp to start with
 
 
-## Get a specific Course
+## Get a specific Key Figure Overview
 
 
 ```shell
-curl "http://rest-api.verkehrsrundschau.de/course-author/detail/2164817"  -H "X-Auth-Token: meowmeowmeow"
+curl "http://rest-api.verkehrsrundschau.de/keyfigure-overview/detail/2167846"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this (shortened):
+
+```json
+{
+    "id": "2167846",
+    "online_date": "2018-05-28 00:00:00",
+    "change_date": "2018-06-06 16:51:32",
+    "title": "Steuerungsdokument",
+    "headline": "Kennzahlen zum Straßengüterverkehr: Frachtraten, Aufkommensentwicklung und vieles mehr ",
+    "text": "<p>Neu: Die Plattform der VerkehrsRundschau zu den Kennzahlen im Transportgewerbe. Hier finden Sie die aktuellen Daten aus dem VerkehrsRundschau-Index. Aber es geht hier nicht nur um Transportpreise, unterteilt nach verschiedenen Kriterien, sondern um viel mehr: Sie erhalten hier Prognosen zur Aufkommens- und Preisentwicklung und viele weitere Informationen, die f&uuml;r Logistikdienstleister und Verlader eine unverzichtbare St&uuml;tze im Unternehmensalltag sind.</p>\r\n<p>Mehr Informationen zum VerkehrsRundschau Index finden Sie <a href=\"http://www.verkehrsrundschau.de/transportpreise\" target=\"http://www.verkehrsrundschau.de/transportpreise\">hier</a>. Wie oft und auf welche Art der Index erhoben wird, wie Sie mitmachen k&ouml;nnen und welche Pr&auml;mien Sie erwarten.</p>",
+    "charts": [
+        {
+            "id": "2146309",
+            "online_date": "2018-03-27 14:29:00",
+            "change_date": "2018-06-06 16:54:16",
+            "title": "Veränderung des Aufkommens im Vergleich zum Vorjahr (Anteil der Unternehmen in Prozent)",
+            "type": "Column",
+            "js_code": "(function()\n{\nvar chart_container_name = \"chart_2146309\";\n                   \n                  var data = google.visualization.arrayToDataTable([\n['','gestiegen','konstant','gesunken'],\n['Verlader',59.60,23.40,17],\n['Logistikdienstleister',58.80,33.30,7.90],\n]);\nvar formatter1 = new google.visualization.NumberFormat({pattern:'###.##'});\nformatter1.format(data, 1);\nvar formatter2 = new google.visualization.NumberFormat({pattern:'###.##'});\nformatter2.format(data, 2);\nvar formatter3 = new google.visualization.NumberFormat({pattern:'###.##'});\nformatter3.format(data, 3);\n var options = {\n                        colors: ['#e22713', '#022d5c', '#555f6a', '#a6a6a6', '#e6e6e6', '#f6f6f6']\n\n                    ,vAxis: {\ntitle: 'Prozent'\n}\n    \n};\n                    var chart = new google.charts.Bar(document.getElementById(chart_container_name));            \n                    chart.draw(data, google.charts.Bar.convertOptions(options));\n                  \n                \n})();\n",
+            "html_code": "<div id=\"chart_2146309\" class=\"chart chart-column\"></div>",
+            "headline": "Entwicklung des Aufkommens Quartal 2/2017 bis Quartal 1/2018 im Vergleich zum entsprechenden Vorjahreszeitraum",
+            "teaser": "<p>Das ist ein Teaser</p>",
+            "text": "<p>F&uuml;r die Logistikdienstleister waren die letzten zw&ouml;lf Monaten gute Monate: Das Aufkommen ist bei den meisten im Vergleich zu dem entsprechenden Vorjahreszeitraum (Q2/2016 bis Q1/2017) gestiegen. Nur 7,9 Prozent der befragten Dienstleister gaben an, dass das Volumen gesunken ist. &Auml;hnlich, aber nicht ganz so positiv sieht es bei den Verladern aus. Dort berichten immerhin 17 Prozent von einem sinkenden Aufkommen in den letzten zw&ouml;lf Monaten.</p>",
+            "sorting_index": 10,
+            "published": 1
+        },
+        {
+            "id": "2146290",
+            "online_date": "2018-03-27 14:11:00",
+            "change_date": "2018-04-10 11:27:41",
+            "title": "Veränderung des Aufkommens im Vergleich zum Vorquartal (Anteil der Unternehmen in Prozent)",
+            "type": "Column",
+            "js_code": "(function()\n{\nvar chart_container_name = \"chart_2146290\";\n                   \n                  var data = google.visualization.arrayToDataTable([\n['','gestiegen','konstant','gesunken'],\n['Verlader ',33.30,52.10,14.60],\n['Logistikdienstleister',28.10,45.30,26.60],\n]);\nvar formatter1 = new google.visualization.NumberFormat({pattern:'###.##'});\nformatter1.format(data, 1);\nvar formatter2 = new google.visualization.NumberFormat({pattern:'###.##'});\nformatter2.format(data, 2);\nvar formatter3 = new google.visualization.NumberFormat({pattern:'###.##'});\nformatter3.format(data, 3);\n var options = {\n                        colors: ['#e22713', '#022d5c', '#555f6a', '#a6a6a6', '#e6e6e6', '#f6f6f6']\n\n                    ,vAxis: {\ntitle: 'Prozent'\n}\n    \n};\n                    var chart = new google.charts.Bar(document.getElementById(chart_container_name));            \n                    chart.draw(data, google.charts.Bar.convertOptions(options));\n                  \n                \n})();\n",
+            "html_code": "<div id=\"chart_2146290\" class=\"chart chart-column\"></div>",
+            "headline": "Entwicklung des Aufkommens im ersten Quartal 2018 im Vergleich zum Vorquartal",
+            "text": "<p>Bei den Logistikdienstleistern ist das erste Quartal 2018 eher ruhig verlaufen. Der Anteil derjenigen, bei denen im Vergleich zum Vorquartel die Mengen gestiegen sind, ist etwa so gro&szlig; wie der Anteil derjenigen, bei denen die Mengen gesunken sind. Bei den Verladern sieht es hingegen etwas anders aus. Bei ihnen verzeichnete immerhin ein Drittel ein Wachstum auch im ersten Quartal 2018.</p>",
+            "sorting_index": 20,
+            "published": 1
+        },
+        {
+            "id": "2142808",
+            "online_date": "2018-03-16 16:34:00",
+            "change_date": "2018-04-13 11:24:42",
+            "title": "Aktuelle Preise von EPAL Europaletten",
+            "type": "External",
+            "html_code": "<style type=\"text/css\">\n\n\t\t.widget-swoplo {\n\t\t\twidth:100%;\n\t\t\tpadding:0;\n\t\t\tmargin:0;\n\t\t\tfont-family:\"Helvetica Neue\", Helvetica, Arial, sans-serif;\n\t\t}\n\n\t\t.widget-swoplo h6 {\n\t\t\tfont-size:16px;\n\t\t\tfont-weight:bold;\n\t\t\tcolor:#444444;\n\t\t\tmargin:0 0 20px 0;\n\t\t}\n\n\t\t.widget-swoplo .pricing {\n\t\t\twidth:100%;\n\t\t\tmargin:0;\n\t\t\tpadding:0;\n\t\t\tborder:none;\n\t\t\tborder-collapse:collapse;\n\t\t\ttext-align:left;\n\t\t}\n\n\t\t.widget-swoplo .pricing thead tr th {\n\t\t\tvertical-align:middle;\n\t\t\tbackground-color:#ebebeb;\n\t\t\tborder-bottom:1px solid #ffffff;\n\t\t\tmargin:0;\n\t\t\tpadding:20px 0 10px;\n\t\t\ttext-align:left;\n\t\t\tfont-size:14px;\n\t\t\tfont-weight:bold;\n\t\t\tcolor:#444444;\n\t\t}\n\n\t\t.widget-swoplo .pricing thead tr th span {\n\t\t\tdisplay:inline-block;\n\t\t\twidth:14px;\n\t\t\theight:14px;\n\t\t\tmargin:0 0 0 10px;\n\t\t\tbackground-color:#022d5c;\n\t\t\t-webkit-border-radius:50%;\n\t\t\t-moz-border-radius:50%;\n\t\t\tborder-radius:50%;\n\t\t\tfont-family:Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;\n\t\t\tcolor:#ffffff;\n\t\t\tfont-weight:bold;\n\t\t\tfont-size:13px;\n\t\t\ttext-align:center;\n\t\t}\n\n\t\t.widget-swoplo .pricing tbody:before {\n\t\t\tcontent:\"\";\n\t\t\tdisplay:block;\n\t\t\tline-height:1px;\n\t\t\tcolor:transparent;\n\t\t}\n\n\t\t.widget-swoplo .pricing tbody tr td {\n\t\t\tborder:1px solid #ebebeb;\n\t\t\tmargin:0;\n\t\t\tpadding:20px 10px;\n\t\t\ttext-align:left;\n\t\t\tfont-size:14px;\n\t\t\tcolor:#444444;\n\t\t\twidth:20%;\n\t\t}\n\n\t\t.widget-swoplo .pricing tbody tr td.title {\n\t\t\tfont-weight:bold;\n\t\t\tline-height:20px;\n\t\t}\n\n\t\t.widget-swoplo .pricing tbody tr td.title .small {\n\t\t\tdisplay:block;\n\t\t\tfont-weight:normal;\n\t\t}\n\n\t\t.widget-swoplo .pricing tbody tr td a {\n\t\t\tcolor:#022d5c;\n\t\t\ttext-decoration:underline;\n\t\t}\n\n\t\t.widget-swoplo .pricing tbody tr td a:hover {\n\t\t\tcolor:#022d5c;\n\t\t\ttext-decoration:none;\n\t\t}\n\n\t\t.widget-swoplo .pricing tfoot tr td {\n\t\t\tfont-size:12px;\n\t\t\tcolor:#444444;\n\t\t\tpadding:15px 0 0;\n\t\t\tfont-weight:normal;\n\t\t}\n\n\t\t.widget-swoplo .pricing tfoot tr td .homelink {\n\t\t\tdisplay:block;\n\t\t\tfont-size:12px;\n\t\t\tcolor:#022d5c;\n\t\t\tfont-weight:bold;\n\t\t\ttext-decoration:none;\n\t\t}\n\n\t\t.widget-swoplo .pricing tfoot tr td .homelink:hover {\n\t\t\ttext-decoration:underline;\n\t\t}\n\n\t\t.widget-swoplo .pricing tfoot tr td.logo {\n\t\t\ttext-align:right;\n\t\t\tpadding:10px 20px 0;\n\t\t}\n\t\t\n\t\t@media only screen and (max-width:480px) {\n\n\t\t\t.widget-swoplo .pricing thead tr th {\n\t\t\t\tpadding:5px;\n\t\t\t\ttext-align:center;\n\t\t\t\tfont-size:12px;\n\t\t\t}\n\n\t\t\t.widget-swoplo .pricing tbody tr td {\n\t\t\t\tpadding:5px;\n\t\t\t\ttext-align:center;\n\t\t\t}\n\n\t\t\t.widget-swoplo .pricing tbody tr td.price span {\n\t\t\t\tdisplay:block;\n\t\t\t}\n\n\t\t\t.widget-swoplo .pricing tbody tr td.title {\n\t\t\t\tposition:relative;\n\t\t\t\tfont-weight:bold;\n\t\t\t\tline-height:auto;\n\t\t\t\tpadding:5px;\n\t\t\t\twidth:10%;\n\t\t\t\theight:170px;\n\t\t\t}\n\t\t\t\n\t\t\t.widget-swoplo .pricing tbody tr td.title div {\n\t\t\t\tposition:absolute;\n\t\t\t\tleft:-67px;\n\t\t\t\ttop:71px;\n\t\t\t\tdisplay:block;\n\t\t\t\twidth:170px;\n\t\t\t\tline-height:16px;\n\t\t\t\ttransform: rotate(270deg);\n\t\t\t\t-webkit-transform: rotate(270deg);\n\t\t\t\t-moz-transform: rotate(270deg);\n\t\t\t\t-o-transform: rotate(270deg);\n\t\t\t\t-ms-transform: rotate(270deg);\n\t\t\t}\n\t\t\n\t\t}\n\n\t</style><div class=\"widget-swoplo\"><table class=\"pricing\"><thead><tr><th>&nbsp;</th><th>Neu</th><th>Klasse A</th><th>Klasse B</th><th>Klasse C</th></tr></thead><tbody><tr><td class=\"title\"><div>Aktuelle Angebote</div></td><td class=\"price\"><a href=\"https://www.swoplo.com/de/sources?partner=verkehrsrundschau&amp;campaign=pricewidget\" target=\"_blank\"><span><nobr>7,90 &euro;</nobr></span> - \n\t\t\t\t\t\t\t<span><nobr>7,90 &euro;</nobr></span></a></td><td class=\"price\"><a href=\"https://www.swoplo.com/de/sources?partner=verkehrsrundschau&amp;campaign=pricewidget\" target=\"_blank\"><span><nobr>6,00 &euro;</nobr></span> - \n\t\t\t\t\t\t\t<span><nobr>7,40 &euro;</nobr></span></a></td><td class=\"price\"><a href=\"https://www.swoplo.com/de/sources?partner=verkehrsrundschau&amp;campaign=pricewidget\" target=\"_blank\"><span><nobr>4,50 &euro;</nobr></span> - \n\t\t\t\t\t\t\t<span><nobr>6,60 &euro;</nobr></span></a></td><td class=\"price\"><a href=\"https://www.swoplo.com/de/sources?partner=verkehrsrundschau&amp;campaign=pricewidget\" target=\"_blank\"><span><nobr>2,20 &euro;</nobr></span> - \n\t\t\t\t\t\t\t<span><nobr>6,10 &euro;</nobr></span></a></td></tr><tr><td class=\"title\"><div>Ist Transaktionspreis <span class=\"small\">(ab Station)</span></div></td><td><a href=\"https://www.swoplo.com/de/sources?partner=verkehrsrundschau&amp;campaign=pricewidget\" target=\"_blank\"><nobr>7,90 &euro;</nobr></a></td><td><a href=\"https://www.swoplo.com/de/sources?partner=verkehrsrundschau&amp;campaign=pricewidget\" target=\"_blank\"><nobr>6,73 &euro;</nobr></a></td><td><a href=\"https://www.swoplo.com/de/sources?partner=verkehrsrundschau&amp;campaign=pricewidget\" target=\"_blank\"><nobr>5,21 &euro;</nobr></a></td><td><a href=\"https://www.swoplo.com/de/sources?partner=verkehrsrundschau&amp;campaign=pricewidget\" target=\"_blank\"><nobr>4,60 &euro;</nobr></a></td></tr></tbody></table></div>",
+            "headline": "Preise von EPAL Europaletten",
+            "text": "<p>In dieser Tabelle finden Sie Preise von EPAL Europaletten, sortiert nach Neuware sowie den Klassen A, B und C. Unser Kooperationspartner swoplo AG, eine branchen&uuml;bergreifende Palettenb&ouml;rse, liefert die Informationen t&auml;glich anhand der aktuellen Preise im Portal.</p>",
+            "sorting_index": 80,
+            "published": 1
+        }
+    ],
+    "google_js_pre": "<script type=\"text/javascript\" src=\"https://www.gstatic.com/charts/loader.js\"></script>\n    <script>\n        (function()\n        {\n            google.charts.load('current', {'packages':['table', 'line', 'bar', 'corechart'], 'language': 'de'});\n            var drawCharts = function()\n            {",
+    "google_js_suffix": "};\n            google.charts.setOnLoadCallback(drawCharts);\n            window.addEventListener(\"resize\", drawCharts);\n        })();\n    </script>",
+    "tags": "Pegel, Christian (SPD)",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Key Figure Overview.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/keyfigure-overview/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the  Key Figure Overview to retrieve
+
+==================
+## Get All Key Figure Charts from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/keyfigure-chart/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "2142808",
+    "2146290",
+    "2146309",
+    "2146084",
+    "2142662",
+    "2142659",
+    "2146167",
+    "2142658",
+    "2145943",
+    "2146261",
+    "2145903",
+    "2142646",
+    "2146203",
+    "2142661"
+]
+```
+
+This endpoint retrieves all Key Figure Charts with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/keyfigure-chart/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Key Figure Chart
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/keyfigure-chart/detail/2145903"  -H "X-Auth-Token: meowmeowmeow"
 ```
 
 
@@ -1640,26 +1761,32 @@ curl "http://rest-api.verkehrsrundschau.de/course-author/detail/2164817"  -H "X-
 
 ```json
 {
-    "id": "2164817",
-    "online_date": "2018-05-16 15:40:00",
-    "change_date": "2018-05-16 15:40:31",
-    "title": "Olleg Bollek",
+    "id": "2145903",
+    "online_date": "2018-03-26 16:51:00",
+    "change_date": "2018-04-09 13:24:10",
+    "title": "VerkehrsRundschau-Index",
+    "type": "Line",
+    "js_code": "(function()\n{\nvar chart_container_name = \"chart_2145903\";\n \n   \n                var data = google.visualization.arrayToDataTable([\n['Quartal/Jahr','VR-Index in Punkten'],\n['Q1/2015',120.32],\n['Q2/2015',120.35],\n['Q3/2015',121.08],\n['Q4/2015',122.11],\n['Q1/2016',121.56],\n['Q2/2016',121.63],\n['Q3/2016',120.96],\n['Q4/2016',121.24],\n['Q1/2017',122.14],\n['Q2/2017',122.08],\n['Q1/2018',123.23],\n]);\nvar formatter1 = new google.visualization.NumberFormat({pattern:'###.##'});\nformatter1.format(data, 1);\n  \n          var options = {\n          colors: ['#e22713', '#022d5c', '#555f6a', '#a6a6a6', '#e6e6e6', '#f6f6f6'],\n\n          legend: { position: 'bottom' },hAxis: {\ntitle: 'Quartal/Jahr',\ngridlines: {\ncolor: '#cccccc'\n},\nbaselineColor: '#cccccc',\nbaseline: -1\n},\nvAxis: {\ntitle: 'VR-Index in Punkten'\n,format:'###.###'\n}\n};\n                    \n                    var chart = new google.charts.Line(document.getElementById(chart_container_name));\n                    chart.draw(data, google.charts.Line.convertOptions(options));              \n                \n})();\n",
+    "html_code": "<div id=\"chart_2145903\" class=\"chart chart-line\"></div>",
+    "headline": "Preisindex für den Straßengüterverkehr in Deutschland",
+    "text": "<p>Der VerkehrsRundschau-Index ist im ersten Quartal 2018 um 0,93 Prozent gegen&uuml;ber dem zweiten Quartal 2017 auf 123,23 Punkte gestiegen. Verteilt auf die drei Quartale ergibt sich ein Preisanstieg um 0,31 Prozent pro Quartal. Die im ersten Quartal 2018 erreichten 123,23 Punkte sind der h&ouml;chste Stand seit Bestehen des Index im Jahr 2007. Beim VR-Index werden jedes Quartal die Transportpreise im Stra&szlig;eng&uuml;terverkehr in Deutschland ermittelt. Es gibt den Index seit 2007. Er ist damit der &auml;lteste Index am Markt. Zugleich gibt es keinen Index im Stra&szlig;eng&uuml;terverkehr, der so schnell die Transportpreise zum abgelaufenen Quartal ver&ouml;ffentlicht.</p>",
+    "sorting_index": 70,
     "published": 1
 }
 ```
 
-This endpoint retrieves a specific Course Author.
+This endpoint retrieves a specific Key Figure Chart.
 
 
 ### HTTP Request
 
-`GET http://rest-api.verkehrsrundschau.de/course-author/detail/<ID>`
+`GET http://rest-api.verkehrsrundschau.de/keyfigure-chart/detail/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the  Course Author to retrieve
+ID | The ID of the  Key Figure Chart to retrieve
 
 ==================
 
