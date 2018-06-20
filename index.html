@@ -357,9 +357,6 @@
                   <li>
                     <a href="#get-all-course-videos-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-course-videos-from-given-timestamp">Get All Course Videos from given timestamp</a>
                   </li>
-                  <li>
-                    <a href="#get-a-specific-course-video" class="toc-h2 toc-link" data-title="get-a-specific-course-video">Get a specific Course Video</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -1939,61 +1936,7 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
     </span><span class="s2">"2164834"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"2164830"</span><span class="w">
 </span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all Course Videos with change dates greater than give timestamp.</p>
-<h3 id='http-request-34'>HTTP Request</h3>
-<p><code>GET http://rest-api.verkehrsrundschau.de/course-video/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-19'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>timestamp</td>
-<td>0</td>
-<td>Unix Timestamp to start with</td>
-</tr>
-</tbody></table>
-<h2 id='get-a-specific-course-video'>Get a specific Course Video</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/course-video/detail/2164834"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2164834"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Honk"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-16 00:00:00"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-16 15:50:09"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mein Teaser"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mein Text"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"video_html"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;iframe src=</span><span class="se">\"</span><span class="s2">https://player.vimeo.com/video/268216832?title=0&amp;byline=0&amp;portrait=0&amp;color=e22713&amp;app_id=122963</span><span class="se">\"</span><span class="s2"> width=</span><span class="se">\"</span><span class="s2">1055</span><span class="se">\"</span><span class="s2"> height=</span><span class="se">\"</span><span class="s2">593</span><span class="se">\"</span><span class="s2"> frameborder=</span><span class="se">\"</span><span class="s2">0</span><span class="se">\"</span><span class="s2"> title=</span><span class="se">\"</span><span class="s2">Why Are You Honking?</span><span class="se">\"</span><span class="s2"> webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"length"</span><span class="p">:</span><span class="w"> </span><span class="s2">"05:26"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/5827/700619362_960.jpg"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mein Tag"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific Course Video.</p>
-<h3 id='http-request-35'>HTTP Request</h3>
-<p><code>GET http://rest-api.verkehrsrundschau.de/course-video/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-16'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the  Course Video to retrieve</td>
-</tr>
-</tbody></table>
-
-<p>==================</p>
-<h1 id='key-figure'>Key Figure</h1><h2 id='get-all-key-figure-overviews-from-given-timestamp'>Get All Key Figure Overviews from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/keyfigure-overview/ids/2"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</span></code></pre><h1 id='key-figure'>Key Figure</h1><h2 id='get-all-key-figure-overviews-from-given-timestamp'>Get All Key Figure Overviews from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/keyfigure-overview/ids/2"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -2003,9 +1946,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Key Figure Overviews with change dates greater than give timestamp.</p>
-<h3 id='http-request-36'>HTTP Request</h3>
+<h3 id='http-request-34'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/keyfigure-overview/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-20'>Query Parameters</h3>
+<h3 id='query-parameters-19'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2079,9 +2022,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Key Figure Overview.</p>
-<h3 id='http-request-37'>HTTP Request</h3>
+<h3 id='http-request-35'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/keyfigure-overview/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-17'>URL Parameters</h3>
+<h3 id='url-parameters-16'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2118,9 +2061,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Key Figure Charts with change dates greater than give timestamp.</p>
-<h3 id='http-request-38'>HTTP Request</h3>
+<h3 id='http-request-36'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/keyfigure-chart/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-21'>Query Parameters</h3>
+<h3 id='query-parameters-20'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2156,9 +2099,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Key Figure Chart.</p>
-<h3 id='http-request-39'>HTTP Request</h3>
+<h3 id='http-request-37'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/keyfigure-chart/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-18'>URL Parameters</h3>
+<h3 id='url-parameters-17'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2189,9 +2132,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Market Overviews with change dates greater than give timestamp.</p>
-<h3 id='http-request-40'>HTTP Request</h3>
+<h3 id='http-request-38'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/market-overview/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-22'>Query Parameters</h3>
+<h3 id='query-parameters-21'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2563,9 +2506,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Market Overview.</p>
-<h3 id='http-request-41'>HTTP Request</h3>
+<h3 id='http-request-39'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/market-overview/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-19'>URL Parameters</h3>
+<h3 id='url-parameters-18'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2596,9 +2539,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Market Overview Attributes with change dates greater than give timestamp.</p>
-<h3 id='http-request-42'>HTTP Request</h3>
+<h3 id='http-request-40'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/market-overview-attribute/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-23'>Query Parameters</h3>
+<h3 id='query-parameters-22'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2627,9 +2570,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Market Overview Attribute.</p>
-<h3 id='http-request-43'>HTTP Request</h3>
+<h3 id='http-request-41'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/market-overview-attribute/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-20'>URL Parameters</h3>
+<h3 id='url-parameters-19'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2663,9 +2606,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Market Overview Items with change dates greater than give timestamp.</p>
-<h3 id='http-request-44'>HTTP Request</h3>
+<h3 id='http-request-42'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/market-overview-item/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-24'>Query Parameters</h3>
+<h3 id='query-parameters-23'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3191,9 +3134,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Market Overview Item.</p>
-<h3 id='http-request-45'>HTTP Request</h3>
+<h3 id='http-request-43'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/market-overview-item/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-21'>URL Parameters</h3>
+<h3 id='url-parameters-20'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3223,9 +3166,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </span></code></pre>
 <p>This endpoint retrieves all Market Overview Fields with change dates greater than give timestamp.
 A Field is a combination of an item and an attribute,</p>
-<h3 id='http-request-46'>HTTP Request</h3>
+<h3 id='http-request-44'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/market-overview-field/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-25'>Query Parameters</h3>
+<h3 id='query-parameters-24'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3255,9 +3198,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Market Overview Field.</p>
-<h3 id='http-request-47'>HTTP Request</h3>
+<h3 id='http-request-45'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/market-overview-field/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-22'>URL Parameters</h3>
+<h3 id='url-parameters-21'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3280,9 +3223,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Blog Entries with change dates greater than give timestamp.</p>
-<h3 id='http-request-48'>HTTP Request</h3>
+<h3 id='http-request-46'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/blog/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-26'>Query Parameters</h3>
+<h3 id='query-parameters-25'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3312,9 +3255,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Blog Entry.</p>
-<h3 id='http-request-49'>HTTP Request</h3>
+<h3 id='http-request-47'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/blog/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-23'>URL Parameters</h3>
+<h3 id='url-parameters-22'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3337,9 +3280,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Blog Authors with change dates greater than give timestamp.</p>
-<h3 id='http-request-50'>HTTP Request</h3>
+<h3 id='http-request-48'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/blog-author/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-27'>Query Parameters</h3>
+<h3 id='query-parameters-26'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3370,9 +3313,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Blog Author.</p>
-<h3 id='http-request-51'>HTTP Request</h3>
+<h3 id='http-request-49'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/blog-author/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-24'>URL Parameters</h3>
+<h3 id='url-parameters-23'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3404,9 +3347,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Blog Lasi Entries with change dates greater than give timestamp.</p>
-<h3 id='http-request-52'>HTTP Request</h3>
+<h3 id='http-request-50'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/blog-entry-lasi/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-28'>Query Parameters</h3>
+<h3 id='query-parameters-27'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3446,9 +3389,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Blog Lasi Entry.</p>
-<h3 id='http-request-53'>HTTP Request</h3>
+<h3 id='http-request-51'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/blog-entry-lasi/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-25'>URL Parameters</h3>
+<h3 id='url-parameters-24'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3484,9 +3427,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Blog Leru Entries with change dates greater than give timestamp.</p>
-<h3 id='http-request-54'>HTTP Request</h3>
+<h3 id='http-request-52'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/blog-entry-leru/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-29'>Query Parameters</h3>
+<h3 id='query-parameters-28'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3525,9 +3468,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Blog Leru Entry.</p>
-<h3 id='http-request-55'>HTTP Request</h3>
+<h3 id='http-request-53'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/blog-entry-leru/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-26'>URL Parameters</h3>
+<h3 id='url-parameters-25'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3567,9 +3510,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Ban On Driving Items with change dates greater than give timestamp.</p>
-<h3 id='http-request-56'>HTTP Request</h3>
+<h3 id='http-request-54'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/ban-on-driving-item/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-30'>Query Parameters</h3>
+<h3 id='query-parameters-29'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3700,9 +3643,9 @@ A Field is a combination of an item and an attribute,</p>
 <p>This endpoint retrieves a specific Ban On Driving Item.</p>
 
 <p>Important: the returned &#39;calculated_dates&#39; are no real CMS Objects. They are calculated everytime the Item is changed.</p>
-<h3 id='http-request-57'>HTTP Request</h3>
+<h3 id='http-request-55'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/ban-on-driving-item/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-27'>URL Parameters</h3>
+<h3 id='url-parameters-26'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3735,9 +3678,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Ban On Driving Countrys with change dates greater than give timestamp.</p>
-<h3 id='http-request-58'>HTTP Request</h3>
+<h3 id='http-request-56'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/ban-on-driving-country/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-31'>Query Parameters</h3>
+<h3 id='query-parameters-30'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3766,9 +3709,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Ban On Driving Country.</p>
-<h3 id='http-request-59'>HTTP Request</h3>
+<h3 id='http-request-57'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/ban-on-driving-country/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-28'>URL Parameters</h3>
+<h3 id='url-parameters-27'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3800,9 +3743,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Ban On Driving Vehicle Classes with change dates greater than give timestamp.</p>
-<h3 id='http-request-60'>HTTP Request</h3>
+<h3 id='http-request-58'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/ban-on-driving-vehicle-class/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-32'>Query Parameters</h3>
+<h3 id='query-parameters-31'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3831,9 +3774,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Ban On Driving Vehicle Class.</p>
-<h3 id='http-request-61'>HTTP Request</h3>
+<h3 id='http-request-59'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/ban-on-driving-vehicle-class/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-29'>URL Parameters</h3>
+<h3 id='url-parameters-28'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3879,9 +3822,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Deleted Objects with deleted dates greater than given timestamp.</p>
-<h3 id='http-request-62'>HTTP Request</h3>
+<h3 id='http-request-60'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/deleted/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-33'>Query Parameters</h3>
+<h3 id='query-parameters-32'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
