@@ -1155,7 +1155,7 @@ timestamp | 0 | Unix Timestamp to start with
 
 
 ```shell
-curl "http://rest-api.verkehrsrundschau.de/course/detail/2164840"  -H "X-Auth-Token: meowmeowmeow"
+curl "http://rest-api.verkehrsrundschau.de/course/detail/2164820"  -H "X-Auth-Token: meowmeowmeow"
 ```
 
 
@@ -1163,29 +1163,102 @@ curl "http://rest-api.verkehrsrundschau.de/course/detail/2164840"  -H "X-Auth-To
 
 ```json
 {
-    "id": "2164840",
+    "id": "2164820",
     "online_date": "2018-05-16 00:00:00",
-    "change_date": "2018-05-16 15:57:51",
-    "title": "Test2",
+    "change_date": "2018-06-08 09:13:52",
+    "title": "Test1",
+    "category": "Meine Kategorie",
     "author": [
         {
-            "id": "2164816",
+            "id": "2164817",
             "online_date": "2018-05-16 15:40:00",
-            "change_date": "2018-05-16 15:40:10",
-            "title": "Hans Meiser",
+            "change_date": "2018-05-16 15:40:31",
+            "title": "Olleg Bollek",
             "published": 1
         }
     ],
     "is_credit_package_required": 1,
     "has_certificate": 1,
     "certificate_template": "VerkehrsRundschau plus",
-    "credit_cost": "7",
+    "credit_cost": "1",
     "is_unlock_modules_one_after_one": 1,
     "retries_final_test": "3",
-    "goals": "Weiter als 2 Meter springen.\r\nKugelstoßen Weltrekord.\r\n",
-    "target_audience": "Weitspringer, Kugelstoßer",
+    "goals": "Kugelstoßen Weltrekord.\r\nWeiter als 2 Meter springen.",
+    "target_audience": "Kugelstoßer, Weitspringer",
     "teaser": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-    "image_url": "https://media1.verkehrsrundschau.de/sixcms/media.php/2732/traumphase_by_markuszeller-dc1821o.png.jpg",
+    "image": "https://media1.verkehrsrundschau.de/sixcms/media.php/5709/Xurzon_GettyImages_iStock-803348678.jpg",
+    "image_copyright": "Xurzon/Getty Images/iStock",
+    "image_caption": "dasd asdasdasdasda dasdasdasdasd",
+    "video": [],
+    "modules": [
+        {
+            "id": "2164833",
+            "online_date": "2018-05-16 15:44:00",
+            "change_date": "2018-06-08 09:13:52",
+            "title": "Modul 1",
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "type": "WBT",
+            "is_final_test": 1,
+            "translations": [
+                {
+                    "id": "2164832",
+                    "online_date": "2018-05-16 15:46:00",
+                    "change_date": "2018-06-08 09:13:52",
+                    "title": "Sprache 1",
+                    "wbt_upload": "https://media1.verkehrsrundschau.de/sixcms/media.php/5828/original.txt",
+                    "language": {
+                        "id": "2164813",
+                        "online_date": "2018-05-16 15:30:00",
+                        "change_date": "2018-05-16 15:30:02",
+                        "title": "Deutsch",
+                        "published": 1
+                    },
+                    "alt_title": "Titel für die Extrawurst",
+                    "alt_text": "Jajajaja.",
+                    "published": 1
+                }
+            ],
+            "sorting_index": 0,
+            "published": 1
+        }
+    ],
+    "tools": [
+        {
+            "id": "2162262",
+            "online_date": "2018-05-07 00:00:00",
+            "change_date": "2018-05-07 14:38:59",
+            "title": "Zuwächse der Mautsätze Stand 7.5.2018",
+            "type": "Studien&Dokumente",
+            "upload": "https://media1.verkehrsrundschau.de/sixcms/media.php/4513/Zuwachs%20Mautsaetze.pdf",
+            "teaser": "Die voraussichtlichen Zuwächse der Mautsätze im Vergleich. Grundlage für die Angaben bilden der Entwurf des 5. Gesetzes zur Änderung des Bundesfernstraßenmautgesetzes vom 27. April 2018 und das Wegekostengutachten 2018-2022.",
+            "tags": "Markt Lkw-Landverkehr & Stückgut,Verkehr Maut Deutschland Lkw Pkw",
+            "published": 1
+        },
+        {
+            "id": "1878398",
+            "online_date": "2018-04-06 00:00:00",
+            "change_date": "2018-04-06 11:36:45",
+            "title": "Entsenderegeln in Europa",
+            "type": "Studien&Dokumente",
+            "upload": "https://media1.verkehrsrundschau.de/sixcms/media.php/4513/Entsenderegeln-in-Europa.pdf",
+            "teaser": "Die Regeln für die Entsendung ausländischer Mitarbeiter wurden in vielen Nachbarländern verschärft. Gebietsfremde Arbeitgeber müssen ihre Arbeitnehmer anmelden. Die aktuellen Vorschriften finden Sie hier auf einen Blick. \r\n\r\nStand: März 2018",
+            "image": "/sixcms/media.php/4494/Europafahne%20Picture%20Alliance%20CHROMORANGE%20620.jpg",
+            "tags": "E-Benelux,E-Frankreich,E-Nordeuropa,E-Österreich,E-Polen,E-Schweiz,E-Tschechien-Slowakei,Geld Mindestlohn,Recht Transport und Spedition,Beruf Arbeitsrecht & Personalwesen,Geld Löhne und Gehälter",
+            "published": 1
+        },
+        {
+            "id": "2131974",
+            "online_date": "2018-02-19 00:00:00",
+            "change_date": "2018-02-19 10:14:51",
+            "title": "Luftverkehrskonzept des Bundesministeriums für Verkehr und digitale Infrastruktur",
+            "type": "Studien&Dokumente",
+            "upload": "https://media1.verkehrsrundschau.de/sixcms/media.php/4513/luftverkehrskonzept.pdf",
+            "teaser": "Das Dokument enthält das Luftverkehrskonzept des BMVI mit Maßnahmen zur Stärkung und Sicherung des Luftverkehrsstandorts Deutschland ",
+            "tags": "Markt Luftfracht,Verkehr Infrastruktur allgemein,Verkehrspolitik Deutschland",
+            "published": 1
+        }
+    ],
+    "tags": "D-Nordrhein-Westfalen",
     "published": 1
 }
 ```
@@ -1578,9 +1651,12 @@ curl "http://rest-api.verkehrsrundschau.de/course-video/detail/2164834"  -H "X-A
     "title": "Honk",
     "online_date": "2018-05-16 00:00:00",
     "change_date": "2018-05-16 15:50:09",
+    "teaser": "Mein Teaser",
+    "text": "Mein Text",
     "video_html": "<iframe src=\"https://player.vimeo.com/video/268216832?title=0&byline=0&portrait=0&color=e22713&app_id=122963\" width=\"1055\" height=\"593\" frameborder=\"0\" title=\"Why Are You Honking?\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "length": "05:26",
     "image": "https://media1.verkehrsrundschau.de/sixcms/media.php/5827/700619362_960.jpg",
+    "tags": "Mein Tag",
     "published": 1
 }
 ```
@@ -1763,13 +1839,15 @@ curl "http://rest-api.verkehrsrundschau.de/keyfigure-chart/detail/2145903"  -H "
 {
     "id": "2145903",
     "online_date": "2018-03-26 16:51:00",
-    "change_date": "2018-04-09 13:24:10",
+    "change_date": "2018-06-07 09:27:28",
     "title": "VerkehrsRundschau-Index",
     "type": "Line",
     "js_code": "(function()\n{\nvar chart_container_name = \"chart_2145903\";\n \n   \n                var data = google.visualization.arrayToDataTable([\n['Quartal/Jahr','VR-Index in Punkten'],\n['Q1/2015',120.32],\n['Q2/2015',120.35],\n['Q3/2015',121.08],\n['Q4/2015',122.11],\n['Q1/2016',121.56],\n['Q2/2016',121.63],\n['Q3/2016',120.96],\n['Q4/2016',121.24],\n['Q1/2017',122.14],\n['Q2/2017',122.08],\n['Q1/2018',123.23],\n]);\nvar formatter1 = new google.visualization.NumberFormat({pattern:'###.##'});\nformatter1.format(data, 1);\n  \n          var options = {\n          colors: ['#e22713', '#022d5c', '#555f6a', '#a6a6a6', '#e6e6e6', '#f6f6f6'],\n\n          legend: { position: 'bottom' },hAxis: {\ntitle: 'Quartal/Jahr',\ngridlines: {\ncolor: '#cccccc'\n},\nbaselineColor: '#cccccc',\nbaseline: -1\n},\nvAxis: {\ntitle: 'VR-Index in Punkten'\n,format:'###.###'\n}\n};\n                    \n                    var chart = new google.charts.Line(document.getElementById(chart_container_name));\n                    chart.draw(data, google.charts.Line.convertOptions(options));              \n                \n})();\n",
     "html_code": "<div id=\"chart_2145903\" class=\"chart chart-line\"></div>",
     "headline": "Preisindex für den Straßengüterverkehr in Deutschland",
+    "teaser": "<p>ajbgkdf</p>",
     "text": "<p>Der VerkehrsRundschau-Index ist im ersten Quartal 2018 um 0,93 Prozent gegen&uuml;ber dem zweiten Quartal 2017 auf 123,23 Punkte gestiegen. Verteilt auf die drei Quartale ergibt sich ein Preisanstieg um 0,31 Prozent pro Quartal. Die im ersten Quartal 2018 erreichten 123,23 Punkte sind der h&ouml;chste Stand seit Bestehen des Index im Jahr 2007. Beim VR-Index werden jedes Quartal die Transportpreise im Stra&szlig;eng&uuml;terverkehr in Deutschland ermittelt. Es gibt den Index seit 2007. Er ist damit der &auml;lteste Index am Markt. Zugleich gibt es keinen Index im Stra&szlig;eng&uuml;terverkehr, der so schnell die Transportpreise zum abgelaufenen Quartal ver&ouml;ffentlicht.</p>",
+    "image": "https://media1.verkehrsrundschau.de/sixcms/media.php/209/VR-Index.PNG",
     "sorting_index": 70,
     "published": 1
 }
@@ -1789,6 +1867,1763 @@ Parameter | Description
 ID | The ID of the  Key Figure Chart to retrieve
 
 ==================
+
+# Market Overview
+
+## Get All Market Overviews from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/market-overview/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "1035643",
+    "1015825",
+    "1831688",
+    "1051978",
+    "1062793",
+    "1049861",
+    "1049000",
+    "1019238"
+]
+```
+
+This endpoint retrieves all Market Overviews with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/market-overview/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get specific Market Overview
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/market-overview/detail/1015825"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "1015825",
+    "online_date": "2017-11-27 00:00:00",
+    "change_date": "2017-11-28 12:52:06",
+    "title": "Marktübersicht: Miete 2017/2018",
+    "type": "Standard",
+    "teaser": "In der interaktiven Marktübersicht können Sie die Gesamtangebote von über dreißig lokalen und nationalen NFZ-Vermietern direkt miteinander vergleichen. Über eine Filterfunktion lässt sich gezielt nach Vermietern suchen, die den gewünschten Service und die benötigten Fahrzeuge bieten.",
+    "text": "<p><b>Viel Auswahl, mehr Service</b></p>\r\n<p><b>Mietkunden profitieren von&nbsp;gr&ouml;&szlig;eren Flotten und mehr&nbsp;Service, m&uuml;ssen sich aber&nbsp;teilweise auf steigende Raten&nbsp;einstellen. Diese Trends&nbsp;zeigt die gro&szlig;e Markt&uuml;bersicht&nbsp;</b><b>Nutzfahrzeugmiete.</b><br /><br />Deutschlands Nutzfahrzeugvermieter&nbsp;haben offenbar gut zu tun. Das&nbsp;ist einer der zentralen Trends, die&nbsp;eine gro&szlig;e Umfrage der VerkehrsRundschau&nbsp;unter Deutschlands f&uuml;hrenden Vermietern&nbsp;von Lkw und Trailern ergab. So&nbsp;berichtet der Gro&szlig;teil der Unternehmen,&nbsp;die im Rahmen der j&auml;hrlichen Markt&uuml;bersicht&nbsp;Nutzfahrzeugmiete Angaben zur&nbsp;j&uuml;ngsten Gesch&auml;ftsentwicklung machten,&nbsp;von einer stabilen oder gar gestiegenen&nbsp;Auslastung. Und die gute Laune auf&nbsp;Vermieterseite d&uuml;rfte anhalten: Die&nbsp;Gesch&auml;ftsentwicklung f&uuml;r das Transportgewerbe&nbsp;sch&auml;tzt der Gro&szlig;teil f&uuml;r die kommenden&nbsp;Monate positiv oder zumindest&nbsp;stabil ein.<br /><br />Aber nun zu der f&uuml;r den potenziellen&nbsp;Mietkunden wohl spannendsten Frage,&nbsp;denn &uuml;ber drei Viertel der f&uuml;r die Markt&uuml;bersicht&nbsp;befragten Vermieter machten&nbsp;Angaben zur Preisentwicklung. Davon&nbsp;verzeichnete deutlich &uuml;ber die H&auml;lfte in&nbsp;den vergangenen zw&ouml;lf Monaten stabile&nbsp;Mietraten. Aber: Dies k&ouml;nnte sich bei so&nbsp;manchem Anbieter im Laufe der kommenden&nbsp;zw&ouml;lf Monate &auml;ndern. So plant&nbsp;rund ein Drittel der Unternehmen Mieterh&ouml;hungen,&nbsp;mit fallenden Raten brauchen&nbsp;Mieter den Umfrageergebnissen&nbsp;zufolge erst gar nicht rechnen. Investiert&nbsp;wurde in diesem Jahr auf jeden Fall in die&nbsp;Flotten. Rund 40 Prozent der Vermieter&nbsp;melden eine gleich gro&szlig;e Flotte als noch&nbsp;vor zw&ouml;lf Monaten, &uuml;ber ein Drittel hat&nbsp;seinen Fuhrpark sogar ausgebaut. Die Wenigsten&nbsp;haben im Vergleich zum Herbst&nbsp;2016 eine verkleinerte Flotte vorzuweisen.&nbsp;<br /><br /><b>Mehr Spezialfahrzeuge<br /></b>Bei den Erweiterungen des Angebots eine&nbsp;gr&ouml;&szlig;ere Rolle spielen bei nicht wenigen&nbsp;Vermietern offenbar Spezialfahrzeuge.&nbsp;Pema beispielsweise hat in diesem Jahr das&nbsp;Angebot an Erntefahrzeugen ausgebaut,&nbsp;indem der Fahrzeugbestand an gro&szlig;volumigen&nbsp;Kippmulden deutlich erh&ouml;ht&nbsp;wurde. Lieferant der dreiachsigen&nbsp;Sattelanh&auml;nger mit Aluminium-Kastenmulde&nbsp;ist Schmitz Cargobull. Der badenw&uuml;rttembergische&nbsp;Vermieter Mezger meldet&nbsp;als Neuzug&auml;nge in der Flotte unter&nbsp;anderem Kippsattel mit unterschiedlichen&nbsp;Ausstattungen wie Thermomulden und&nbsp;Mulden mit hydraulischer Heckklappe&nbsp;sowie Sattelzugmaschinen f&uuml;r das Baugewerbe&nbsp;wie Mercedes Arocs HAD und&nbsp;Volvo X-Track. Erst seit einigen Jahren auf&nbsp;dem deutschen Markt pr&auml;sent ist Fraikin.&nbsp;&bdquo;Als herstellerunabh&auml;ngige&nbsp;Tochter der&nbsp;franz&ouml;sischen Fraikin-Gruppe setzen wir&nbsp;gegenw&auml;rtig unsere strategischen Wachstumsziele&nbsp;in den verschiedenen Marktsegmenten&nbsp;erfolgreich um. Und zwar sowohl&nbsp;qualitativ als auch quantitativ&ldquo;, betont&nbsp;Vertriebsleiter Marcus Burmeister. Unternehmensangaben&nbsp;zufolge ist die Gr&ouml;&szlig;e des&nbsp;Fraikin-Fuhrparks hierzulande in den vergangenen&nbsp;zw&ouml;lf Monaten um 40 Prozent&nbsp;gewachsen. Eine Besonderheit ergibt sich&nbsp;bei der ungew&ouml;hnlich langen H&ouml;chstmietdauer:&nbsp;Da Fraikin Deutschland sich neben&nbsp;Standardeinheiten stark auf Abfall-, Entsorgungs-&nbsp;und Kommunalfahrzeuge fokussiert,&nbsp;k&ouml;nnen Fahrzeuge f&uuml;r einen Zeitraum&nbsp;von einem bis zu 120 Monate&nbsp; vemietet&nbsp;werden. Auch der auf MAN-Fahrzeuge&nbsp;spezialisierte Vermieter BFS hat den Bereich&nbsp;der Spezialfahrzeuge ausgebaut und&nbsp;bietet neuerdings auch Saugbagger an. Zu&nbsp;den weiteren Neuzug&auml;ngen in der BFSFlotte&nbsp;in diesem Jahr z&auml;hlt au&szlig;erdem der&nbsp;Transporter MAN TGE.<br /><br /><b>Gro&szlig;e Auswahl bei kleinen Fahrzeugen<br /></b>Apropos Transporter: Ihre Flotten aufger&uuml;stet&nbsp;haben auch die Vermieter vornehmlich&nbsp;kleinerer Nutzfahrzeuge. Buchbinder&nbsp;etwa hat zuletzt neben dem neuen&nbsp; MAN-Transporter&nbsp;unter anderem diverse&nbsp;3,5-Tonner von Ford sowie Iveco Daily-Koffer (7,2 Tonnen) angeschafft.&nbsp;<br />Europcar bietet gewerblichen Kunden an&nbsp;seinen Nutzfahrzeug-Stationen seit diesem&nbsp;Jahr eine Sonderflotte an. Diese umfasst&nbsp;beispielsweise 12- und 14-Tonner,&nbsp;K&uuml;hlfahrzeuge, Frischdienstk&uuml;hler, Dreiseitenkipper&nbsp;und Fahrzeuge mit Doppelkabine&nbsp;und Anh&auml;ngerkupplung. Sixt Rent&nbsp;a Truck derweil hat K&uuml;hlfahrzeuge aus&nbsp;dem Hause Mercedes-Benz ins Sortiment&nbsp;genommen. Bei Hertz&nbsp; sind unter anderem&nbsp;Mercedes-Sprinter und Citroen Jumper,&nbsp;jeweils mit Koffer und Ladebordwand,&nbsp;hinzugekommen. Mietinteressenten finden&nbsp;aber nicht nur viele neue Fahrzeugmodelle&nbsp;in den Flotten der Vermieter,&nbsp;sondern k&ouml;nnen teilweise auch auf mehr&nbsp;Service und ausgefeiltere Technik in den&nbsp;Fahrzeugen bauen.<br />&bdquo;Die Digitalisierung h&auml;lt derzeit in allen&nbsp;Gesch&auml;ftsbereichen Einzug - auch wir als&nbsp;Nutzfahrzeugvermieter setzen uns damit&nbsp;intensiv auseinander&ldquo;, betont Martin Kehnen,&nbsp;Leiter der Mercedes-Benz Charter-Way Miete. Seit M&auml;rz dieses Jahres werde&nbsp;&nbsp;demnach in allen schweren Lkw von Mercedes-Benz das &bdquo;Truck Data Center&ldquo; verbaut,&nbsp;ein neues&nbsp; Vernetzungsmodul, das die Basis f&uuml;r bereits bestehende und k&uuml;nftige&nbsp;Konnektivit&auml;tsl&ouml;sungen bildet. &bdquo;Charter-Way hat damit den Grundstein gelegt, sein&nbsp;Angebot um neue digitale L&ouml;sungen zu&nbsp;erweitern, die Mercedes-Benz und Fleet-Board auf den Markt bringen&ldquo;, so Kehnen.&nbsp;<br /><br /><b>Digitale R&uuml;cknahme</b>&nbsp;<br />Dar&uuml;ber hinaus wurde ein digitales System&nbsp;zur R&uuml;cknahme der Fahrzeuge eingef&uuml;hrt.&nbsp;&bdquo;Kunden erhalten wesentlich&nbsp;schneller das R&uuml;cknahmeprotokoll,&nbsp;gleichzeitig steht das Fahrzeug fr&uuml;her f&uuml;r&nbsp;eine Anschlussvermietung zur Verf&uuml;gung&ldquo;,&nbsp;so Kehnen. Auch MAN Financial&nbsp;Services setzt eigenen Angaben zufolge auf&nbsp;innovative Produkte, um Mehrwerte f&uuml;r&nbsp;die Kunden zu schaffen. &bdquo;So spielen Digitalisierung,&nbsp;elektrische Antriebe und Trailer&nbsp;der Zukunft auch im Vermietgesch&auml;ft&nbsp;eine wichtige Rolle, auf die wir uns derzeit&nbsp;stark konzentrieren&ldquo;, sagt der neue Euro-Leasing-Chef Armin Hofer.<br /><br /><b>Flexibilit&auml;t ist Trumpf<br /></b>Pema derweil will mit flexiblen Angeboten&nbsp;f&uuml;r die Mieter punkten und hat das neue&nbsp;Produkt Rent Plus eingef&uuml;hrt: Nach der&nbsp;vereinbarten Vertragslaufzeit kann der&nbsp;Kunde zwischen den Optionen Verl&auml;ngern,&nbsp;R&uuml;ckgabe oder Erwerb des Fahrzeuges&nbsp;w&auml;hlen. Auch die Vereinbarung einer&nbsp;vorzeitigen R&uuml;ckgabeoption ist m&ouml;glich.&nbsp;&bdquo;Wir besch&auml;ftigen uns immer mit der Erweiterung&nbsp;des Dienstleistungs- sowie Produktportfolios&ldquo;,&nbsp;betont Vertriebsleiter Udo&nbsp;Brestel. &bdquo;Wir wissen, wie wichtig Flexibilit&auml;t&nbsp;in unserem Gesch&auml;ft ist, und setzen&nbsp;alles daran, diese Flexibilit&auml;t unseren Kunden&nbsp;bieten zu k&ouml;nnen.&ldquo;<br />Das Unternehmen beschr&auml;nkt sich &uuml;brigens&nbsp;nicht nur auf die Vermietung von&nbsp;Fahrzeugen, sondern ist zudem mit einer&nbsp;hauseigenen Akademie auch im Bereich&nbsp;der Aus- und Weiterbildung unterwegs.&nbsp;Zu den Erweiterungen im Kursangebot&nbsp;z&auml;hlt Unternehmensangaben zufolge&nbsp;unter anderem ein Fachkundelehrgang&nbsp;gef&auml;hrlicher Abfall.&nbsp;<br /><br /><b>Personalkarussel dreht sich&nbsp;</b><br />Neuigkeiten gab es aber nicht nur im Bereich&nbsp;Flotte und Service, sondern auch in&nbsp;Sachen Personal. Am meisten getan hat&nbsp;sich in der F&uuml;hrungsetage von Euro-Leasing/MAN Rental, wo zuletzt gleich mehrere&nbsp;Schl&uuml;sselpositionen neu besetzt wurden.&nbsp;So wurde nicht nur Armin Hofer,&nbsp;bislang Volkswagen Bank, zum neuen&nbsp;CEO berufen. Er l&ouml;st Nils Uphoff ab, der&nbsp;nach dem Ausscheiden Marco Reichweins&nbsp;als Interims-Gesch&auml;ftsf&uuml;hrer diente. Auch&nbsp;die Verantwortlichkeiten im Vertrieb&nbsp;haben sich ge&auml;ndert. Matthias Szupories&nbsp;hat als Leiter Vertrieb und Marketing das&nbsp;Unternehmen verlassen, die Vertriebsleitung&nbsp;obliegt nun Marco Herre. Im Sommer&nbsp;wurde zudem die Position des Leiters&nbsp;Vertrieb Norddeutschland mit dem ehemaligen&nbsp;Volvo-Mann Holger Albermann&nbsp;besetzt. Er k&uuml;mmert sich nun gemeinsam&nbsp;mit Wolfgang Kromer, Leiter Vertrieb Retail&nbsp;Deutschland, um die Anliegen der&nbsp;deutschen Kunden.<br />Auch bei KLVrent hat ein Wechsel an der&nbsp;Unternehmensspitze stattgefunden. So&nbsp;wurde die Gesch&auml;ftsf&uuml;hrung der deutschen&nbsp;Division an den nunmehrigen Alleingesellschafter&nbsp;Thomas Eberl &uuml;bergeben.&nbsp;Eberl, Gesch&auml;ftsf&uuml;hrer der gleichnamigen&nbsp;Spedition im oberbayerischen Aiging,&nbsp;hatte Ende 2016 alle Anteile der&nbsp;deutschen KLVRent &uuml;bernommen.</p>\r\n<p><i>Mareike Haus</i></p>",
+    "image": "https://media1.verkehrsrundschau.de/sixcms/media.php/4494/Fotolia_116569852_Subscription_Yearly_XXL_620x385.jpg",
+    "image_copyright": "Fotolia/Assetseller",
+    "image_caption": "Die meisten Lkw-Vermieter melden gleich groß\r\ngebliebene oder gewachsene Flotten",
+    "headline_howto": "Marktübersicht: Miete Leasing",
+    "text_howto": "Wählen Sie die für Sie interessanten Merkmale aus der Liste aus und starten Sie den Vergleich mit dem Button \"Filter aktivieren\". In der Tabelle können Sie noch einmal die Marken selektieren und sich eine individuelle Ansicht erstellen.",
+    "headline_attribute": "Miete Leasing Vergleich - Aktivieren Sie Ihren Filter!",
+    "headline_items": "Marken-Vergleich",
+    "attributes": [
+        {
+            "id": "1015824",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "Marktsegment",
+            "type": "Trenner",
+            "sorting_index": 10,
+            "published": 1
+        },
+        {
+            "id": "1016858",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "Kurzzeitmiete",
+            "type": "Flag",
+            "sorting_index": 20,
+            "published": 1
+        },
+        {
+            "id": "1015963",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "Langzeitmiete",
+            "type": "Flag",
+            "sorting_index": 30,
+            "published": 1
+        },
+        {
+            "id": "1710717",
+            "online_date": "2015-10-21 13:53:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "Mietkauf",
+            "type": "Flag",
+            "sorting_index": 40,
+            "published": 1
+        },
+        {
+            "id": "1015964",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "Leasing",
+            "type": "Flag",
+            "sorting_index": 50,
+            "published": 1
+        },
+        {
+            "id": "1015965",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "Fullservice-Leasing",
+            "type": "Flag",
+            "sorting_index": 60,
+            "published": 1
+        },
+        {
+            "id": "1303934",
+            "online_date": "2013-11-11 09:43:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "Mindestmietdauer",
+            "type": "Text",
+            "sorting_index": 70,
+            "published": 1
+        },
+        {
+            "id": "2038445",
+            "online_date": "2017-11-27 13:54:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "Höchstmietdauer",
+            "type": "Text",
+            "sorting_index": 80,
+            "published": 1
+        },
+        {
+            "id": "1015966",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "Fuhrpark: NFZ ab 3,5t (ziehende/gezogene Einheiten)",
+            "type": "Text",
+            "sorting_index": 90,
+            "published": 1
+        },
+        {
+            "id": "1016859",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "Standorte (Zahl/PLZ-Gebiet)",
+            "type": "Text",
+            "sorting_index": 100,
+            "published": 1
+        },
+        {
+            "id": "1016861",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "NFZ-Partner",
+            "type": "Text",
+            "sorting_index": 110,
+            "published": 1
+        },
+        {
+            "id": "1016862",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "Mehrwertdienste",
+            "type": "Trenner",
+            "sorting_index": 120,
+            "published": 1
+        },
+        {
+            "id": "1016863",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "Komplettzug (Zugmaschine und Trailer)",
+            "type": "Flag",
+            "sorting_index": 130,
+            "published": 1
+        },
+        {
+            "id": "1016864",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:04",
+            "title": "Wartung",
+            "type": "Flag",
+            "sorting_index": 140,
+            "published": 1
+        },
+        {
+            "id": "1016865",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:05",
+            "title": "Reparatur",
+            "type": "Flag",
+            "sorting_index": 150,
+            "published": 1
+        },
+        {
+            "id": "1016866",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:05",
+            "title": "Pannenservice",
+            "type": "Flag",
+            "sorting_index": 160,
+            "published": 1
+        },
+        {
+            "id": "1016867",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:05",
+            "title": "Ersatzfahrzeug",
+            "type": "Flag",
+            "sorting_index": 170,
+            "published": 1
+        },
+        {
+            "id": "1016868",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:05",
+            "title": "KFZ-Versicherung",
+            "type": "Flag",
+            "sorting_index": 180,
+            "published": 1
+        },
+        {
+            "id": "1016869",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:05",
+            "title": "Reifenservice",
+            "type": "Flag",
+            "sorting_index": 190,
+            "published": 1
+        },
+        {
+            "id": "1016870",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:05",
+            "title": "Tankkarten",
+            "type": "Flag",
+            "sorting_index": 200,
+            "published": 1
+        },
+        {
+            "id": "1016871",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:05",
+            "title": "Telematik",
+            "type": "Flag",
+            "sorting_index": 210,
+            "published": 1
+        },
+        {
+            "id": "1016872",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:05",
+            "title": "GEZ-Gebühren",
+            "type": "Flag",
+            "sorting_index": 220,
+            "published": 1
+        },
+        {
+            "id": "1016873",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:05",
+            "title": "KFZ-Steuer",
+            "type": "Flag",
+            "sorting_index": 230,
+            "published": 1
+        },
+        {
+            "id": "1016874",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:05",
+            "title": "Schadensmanagement",
+            "type": "Flag",
+            "sorting_index": 240,
+            "published": 1
+        },
+        {
+            "id": "1016876",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:05",
+            "title": "Mautabrechnung",
+            "type": "Flag",
+            "sorting_index": 250,
+            "published": 1
+        },
+        {
+            "id": "1016877",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:05",
+            "title": "Gebrauchthandel",
+            "type": "Flag",
+            "sorting_index": 260,
+            "published": 1
+        },
+        {
+            "id": "1016878",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:05",
+            "title": "Pflichtuntersuchungen",
+            "type": "Flag",
+            "sorting_index": 270,
+            "published": 1
+        },
+        {
+            "id": "1016879",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:06",
+            "title": "App",
+            "type": "Flag",
+            "sorting_index": 280,
+            "published": 1
+        },
+        {
+            "id": "1848589",
+            "online_date": "2016-11-08 14:38:00",
+            "change_date": "2017-11-28 12:52:06",
+            "title": "Wunschfarbe",
+            "type": "Flag",
+            "sorting_index": 290,
+            "published": 1
+        },
+        {
+            "id": "1848590",
+            "online_date": "2016-11-08 14:38:00",
+            "change_date": "2017-11-28 12:52:06",
+            "title": "Hol- und Bringdienst",
+            "type": "Flag",
+            "sorting_index": 300,
+            "published": 1
+        },
+        {
+            "id": "1016880",
+            "online_date": "2012-03-19 02:00:00",
+            "change_date": "2017-11-28 12:52:06",
+            "title": "weitere Mehrwertdienste",
+            "type": "Text",
+            "sorting_index": 310,
+            "published": 1
+        }
+    ],
+    "item_ids": [
+        "1016890",
+        "1016894",
+        "1016902",
+        "1016906",
+        "1016915",
+        "1016919",
+        "1016927",
+        "1016935",
+        "1016939",
+        "1016943",
+        "1016947",
+        "1016951",
+        "1016955",
+        "1016959",
+        "1016963",
+        "1016967",
+        "1016971",
+        "1016979",
+        "1016983",
+        "1017004",
+        "1017041",
+        "1017046",
+        "1017052",
+        "1017057",
+        "1017061",
+        "1017065",
+        "1017070",
+        "1017074",
+        "1017078",
+        "1101741",
+        "1104594",
+        "1104624",
+        "1104652",
+        "1304272",
+        "1304305",
+        "1304397",
+        "1304532",
+        "1615441",
+        "1615498",
+        "1711162",
+        "1711190",
+        "1711218",
+        "1711253",
+        "1711286",
+        "1847976",
+        "1848244",
+        "1848273",
+        "1848300",
+        "1848411",
+        "2038707",
+        "2038743"
+    ],
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Market Overview.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/market-overview/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Market Overview to retrieve
+
+## Get All Attributes from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/market-overview-attribute/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this (shortened):
+
+```json
+[
+    "2164290",
+    "1035725",
+    "1035724",
+    "1035723",
+    "1035722",
+    "1035721",
+    "1035720",
+    "1035719",
+    "1795757",
+    "1035726"
+]
+```
+
+This endpoint retrieves all Market Overview Attributes with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/market-overview-attribute/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get specific Attribute
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/market-overview-attribute/detail/2164290"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2164290",
+    "online_date": "2018-05-15 14:21:00",
+    "change_date": "2018-05-15 15:34:43",
+    "title": "Weitere Akzeptanzstellen Europa (Werkstätten etc.)",
+    "type": "Text",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Market Overview Attribute.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/market-overview-attribute/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Market Overview Attribute to retrieve
+
+## Get All Items from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/market-overview-item/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this (shortened):
+
+```json
+[
+    "1036302",
+    "1960395",
+    "1036353",
+    "1035944",
+    "1119115",
+    "1119061",
+    "1036404",
+    "1673546",
+    "1673411",
+    "1036455",
+    "1036506",
+    "1035995",
+    "1036608"
+]
+```
+
+This endpoint retrieves all Market Overview Items with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/market-overview-item/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get specific Item
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/market-overview-item/detail/1036302"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "1036302",
+    "online_date": "2011-06-03 00:00:00",
+    "change_date": "2018-05-15 15:27:11",
+    "market_overview_id": "1035643",
+    "title": "Westfalen Service Card",
+    "fields": [
+        {
+            "id": "1036288",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:07",
+            "item_id": "1036302",
+            "attribute_id": "1035723",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036256",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035730",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036289",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035714",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036257",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035698",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036290",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035692",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036258",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035731",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036291",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035683",
+            "published": 1
+        },
+        {
+            "id": "1036259",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035699",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036260",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035732",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036293",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035715",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036261",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035700",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036294",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035693",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036262",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035685",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036295",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035684",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036263",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035701",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036264",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035717",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036297",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035716",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036265",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035702",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1796364",
+            "online_date": "2016-05-25 10:39:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1795756",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036298",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035694",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036266",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:08",
+            "item_id": "1036302",
+            "attribute_id": "1035686",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036267",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035703",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036300",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035727",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036268",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035718",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036301",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035695",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036269",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035704",
+            "published": 1
+        },
+        {
+            "id": "1036270",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035687",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036271",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035705",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036272",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035719",
+            "published": 1
+        },
+        {
+            "id": "1036273",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035706",
+            "published": 1
+        },
+        {
+            "id": "1796365",
+            "online_date": "2016-05-25 10:39:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1795757",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036274",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035688",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036275",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035707",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036276",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035720",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036277",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035708",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036278",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035689",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036279",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035709",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036280",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035721",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036281",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035710",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036282",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035690",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036283",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035711",
+            "published": 1
+        },
+        {
+            "id": "1036252",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:09",
+            "item_id": "1036302",
+            "attribute_id": "1035728",
+            "published": 1
+        },
+        {
+            "id": "1036285",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:10",
+            "item_id": "1036302",
+            "attribute_id": "1035712",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036253",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:10",
+            "item_id": "1036302",
+            "attribute_id": "1035696",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036286",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:10",
+            "item_id": "1036302",
+            "attribute_id": "1035691",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036254",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:10",
+            "item_id": "1036302",
+            "attribute_id": "1035729",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036287",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:10",
+            "item_id": "1036302",
+            "attribute_id": "1035713",
+            "value": "on",
+            "published": 1
+        },
+        {
+            "id": "1036255",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:10",
+            "item_id": "1036302",
+            "attribute_id": "1035697",
+            "value": "off",
+            "published": 1
+        },
+        {
+            "id": "1036292",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:10",
+            "item_id": "1036302",
+            "attribute_id": "1035724",
+            "published": 1
+        },
+        {
+            "id": "1036299",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:10",
+            "item_id": "1036302",
+            "attribute_id": "1035726",
+            "published": 1
+        },
+        {
+            "id": "1036284",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:10",
+            "item_id": "1036302",
+            "attribute_id": "1035722",
+            "value": "0,-",
+            "published": 1
+        },
+        {
+            "id": "1036296",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:10",
+            "item_id": "1036302",
+            "attribute_id": "1035725",
+            "value": "k.A.",
+            "published": 1
+        },
+        {
+            "id": "2164412",
+            "online_date": "2018-05-15 15:24:00",
+            "change_date": "2018-05-15 15:27:10",
+            "item_id": "1036302",
+            "attribute_id": "2164289",
+            "value": "5500",
+            "published": 1
+        },
+        {
+            "id": "2164413",
+            "online_date": "2018-05-15 15:24:00",
+            "change_date": "2018-05-15 15:27:11",
+            "item_id": "1036302",
+            "attribute_id": "2164290",
+            "published": 1
+        },
+        {
+            "id": "1036774",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:11",
+            "item_id": "1036302",
+            "attribute_id": "1036662",
+            "value": "Westfalen AG",
+            "published": 1
+        },
+        {
+            "id": "1036775",
+            "online_date": "2011-06-03 00:00:00",
+            "change_date": "2018-05-15 15:27:11",
+            "item_id": "1036302",
+            "attribute_id": "1036663",
+            "value": "www.westfalen.com",
+            "published": 1
+        }
+    ],
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Market Overview Item.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/market-overview-item/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Market Overview Item to retrieve
+
+## Get All Fields from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/market-overview-field/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this (shortened):
+
+```json
+[
+    "1036774",
+    "1036775",
+    "2164413",
+    "1036253",
+    "1036254",
+    "1036255",
+    "1036284",
+    "1036285"
+]
+```
+
+This endpoint retrieves all Market Overview Fields with change dates greater than give timestamp.
+A Field is a combination of an item and an attribute,
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/market-overview-field/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get specific Field
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/market-overview-field/detail/1036388"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "1036388",
+    "online_date": "2011-06-03 00:00:00",
+    "change_date": "2018-05-15 15:15:07",
+    "item_id": "1036404",
+    "attribute_id": "1035730",
+    "value": "on",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Market Overview Field.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/market-overview-field/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Market Overview Field to retrieve
+
+# Blog
+
+## Get All Blog Entries from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/blog/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "2051295",
+    "2051294"
+]
+```
+
+This endpoint retrieves all Blog Entries with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/blog/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Blog Entry
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/blog/detail/2051295"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2051295",
+    "online_date": "9999-12-31 00:00:00",
+    "change_date": "2018-02-01 16:20:45",
+    "title": "Blog: Ladungssicherung",
+    "image": "https://media1.verkehrsrundschau.de/sixcms/media.php/5709/Logo-LaSiBlog.jpg",
+    "teaser": "In unserem Blog zum Thema Ladungssicherung können Sie regelmäßig Beiträge von unserem Blogautor Stephan Bode lesen. Als Autobahnpolizist kennt er viele Tipps und Tricks für die korrekte Ladungssicherung und plaudert in dieser Rubrik für Sie aus dem Nähkästchen.",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Blog Entry.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/blog/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Entry to retrieve
+
+## Get All Blog Authors from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/blog-author/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    "1970018",
+    "1948601"
+]
+```
+
+This endpoint retrieves all Blog Authors with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/blog-author/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Blog Author
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/blog-author/detail/1970018"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "1970018",
+    "online_date": "9999-12-31 00:00:00",
+    "change_date": "2018-06-19 20:58:23",
+    "title": "Mein Titel",
+    "name": "Stephan Bode",
+    "image": "https://media1.verkehrsrundschau.de/sixcms/media.php/5654/Logo-LaSiBlog.png",
+    "text": "<p>Mein Text</p>",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Blog Author.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/blog-author/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Entry to retrieve
+
+## Get All Blog Lasi Entries from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/blog-entry-lasi/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this (shortened):
+
+```json
+[
+    "2044795",
+    "2181263",
+    "2179348",
+    "2169642",
+    "2167709",
+    "2163752",
+    "2163724",
+    "2160593",
+    "2157538",
+    "2150673",
+    "2147539"
+]
+```
+
+This endpoint retrieves all Blog Lasi Entries with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/blog-entry-lasi/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Blog Lasi Entry
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/blog-entry-lasi/detail/1970018"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2169642",
+    "online_date": "2018-06-04 00:00:00",
+    "change_date": "2018-06-04 09:57:48",
+    "title": "Was ist Stückgut?",
+    "teaser": "Der Begriff „Stückgut“ begegnet uns unter anderem in Fahrzeugaufbauzertifikaten nach DIN EN 12642 unter Nummer 4 (Angaben zur Ladung). Doch was fällt unter den Begriff Stückgut?",
+    "text": "<p>Definitionen bzw. Beschreibungen f&uuml;r den Begriff &bdquo;St&uuml;ckgut&ldquo; finden sich in mehreren technischen Regelwerken zur Ladungssicherung bzw. zu begleitenden Regelwerken.</p>\r\n<p><b>VDI 2700 Blatt 6 (Zusammenladung von St&uuml;ckg&uuml;ter)</b></p>\r\n<p>Zu den St&uuml;ckg&uuml;tern z&auml;hlen alle G&uuml;ter, die als St&uuml;ck gehandhabt werden k&ouml;nnen. Dazu z&auml;hlen z. B.: Pakete, Kartonverpackungen und F&auml;sser. St&uuml;ckg&uuml;ter k&ouml;nnen auch in Ballen- oder Rollenform vorliegen. Dies k&ouml;nnen beispielsweise Altpapierballen, Papierrollen oder aufgerollte Metallbleche (Coils) oder auf Spulen aufgerollte Kabel, Rohre oder Schl&auml;uche sein. Weiterhin werden Langg&uuml;ter wie Metallprofile, Stangen, Leimbinder und fl&auml;chige G&uuml;ter, wie Bleche, Holzplatten oder Glasscheiben dem Begriff St&uuml;ckgut zugeordnet.</p>\r\n<p>St&uuml;ckg&uuml;ter k&ouml;nnen sowohl als einzelne St&uuml;cke als auch zu Ladeeinheiten zusammengefasst vorliegen.</p>\r\n<p>Einige Beispiele in Bildern:</p>\r\n<p><img src=\"/sixcms/media.php/springer_fachmedien_01.a.5801.de/sixcms_filename/Stueckgut.png\" border=\"0\" alt=\"(entry 2169634)\" title=\"(entry 2169634)\" width=\"1070\" height=\"803\" cms_gsid=\"springer_fachmedien_01.c.2169634.de\" data-fieldname=\"sixcms_filename\" /></p>\r\n<p>Auch Fahrzeuge, Baumaschinen oder sonstige schwere Einzelg&uuml;ter sind den St&uuml;ckg&uuml;ter zuzurechnen.</p>\r\n<p>Eine weitere Definition (Beschreibung) ist in der DIN 30781 Teil 1 zu finden: &bdquo;<i>St&uuml;ckgut ist individualisiertes Gut, das st&uuml;ckweise gehandhabt wird und st&uuml;ckweise in die Transportinformation eingeht.</i>&ldquo;</p>\r\n<p>Auch damit wird deutlich, dass &bdquo;St&uuml;ckgut&ldquo; nicht zwingend zu Ladeeinheiten zusammengefasst sein muss.</p>\r\n<p>Die DIN-Vorschrift enth&auml;lt noch einen weiteren Begriff, n&auml;mlich des Massenst&uuml;ckgutes: <i>&bdquo;Massenst&uuml;ckgut ist St&uuml;ckgut in gro&szlig;en Mengen (z. B. Stahlpartien, Autos, Sackgutpartien, R&ouml;hren, Fabrikanlagen).&ldquo;</i></p>\r\n<p><b>Herausforderungen bei der Ladungssicherung</b></p>\r\n<p>Hier fallen also gleichartige St&uuml;ckg&uuml;ter in gro&szlig;en Mengen zum Transport an. Diese sind beispielsweise in folgenden Bereichen anzutreffen:</p>\r\n<ul>\r\n<li>Automobilindustrie</li>\r\n<li>Baustoff- und Stahllogistik</li>\r\n<li>Lebensmittel- und Getr&auml;nkelogistik</li>\r\n</ul>\r\n<p>Allen St&uuml;ckg&uuml;tern ist gemeinsam, dass sie sich in Form, Eigenschaften, Abmessungen, Gewicht und Volumen erheblich voneinander unterscheiden k&ouml;nnen. Die Gesamtheit hat erheblichen Einfluss auf die M&ouml;glichkeiten der Ladeeinheitenbildung und der beim Transport erforderlichen Ladungssicherungsma&szlig;nahmen.</p>\r\n<p>Insbesondere das Zusammenladen von unterschiedlichen St&uuml;ckg&uuml;ter ist in Sachen Ladungssicherung h&auml;ufig eine Herausforderung. Dies gilt sowohl f&uuml;r die Erstellung von Beladepl&auml;nen, von der Einhaltung der Lastverteilung und f&uuml;r die Auswahl von Fahrzeug, Ladungssicherungsmittel und Ladungssicherungsverfahren.</p>",
+    "author": {
+        "id": "1970018",
+        "online_date": "9999-12-31 00:00:00",
+        "change_date": "2018-06-19 20:58:23",
+        "title": "Mein Titel",
+        "name": "Stephan Bode",
+        "image": "https://media1.verkehrsrundschau.de/sixcms/media.php/5654/Logo-LaSiBlog.png",
+        "text": "<p>Mein Text</p>",
+        "published": 1
+    },
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Blog Lasi Entry.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/blog-entry-lasi/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Entry to retrieve
+
+## Get All Blog Leru Entries from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/blog-entry-leru/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this (shortened):
+
+```json
+[
+    "2181980",
+    "2170882",
+    "2169116",
+    "2167266",
+    "2165551",
+    "2163887",
+    "2163530",
+    "2161766",
+    "2160433",
+    "2156917",
+    "2150823",
+    "2150264",
+    "2145221",
+    "2142859",
+    "2140711"
+]
+```
+
+This endpoint retrieves all Blog Leru Entries with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/blog-entry-leru/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Blog Leru Entry
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/blog-entry-leru/detail/2181980"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2181980",
+    "online_date": "2018-06-19 00:00:00",
+    "change_date": "2018-06-20 00:03:07",
+    "title": "Sonderregelungen für Busfahrer",
+    "teaser": "Nach intensiver Intervention der Busverbände haben sich einige Mitglieder des Verkehrsausschusses des Europäischen Parlamentes für abweichende Sonderregelungen für die Lenk- und Ruhezeiten von Busfahrern ausgesprochen. Einige dieser möglichen Sondervorschriften wollen wir in diesem Beitrag vorstellen und objektiv kritisch beleuchten.",
+    "text": "<p><b> 1. Verl&auml;ngerung der sog. &bdquo;Schichtzeit&ldquo;</b>: Fahrern im Gelegenheitsverkehr soll es zweimal pro Woche erm&ouml;glicht werden, den 24-Stunden-Zeitraum, in dem die vorgeschriebene T&auml;gliche Ruhezeit liegen muss, um eine Stunde zu verl&auml;ngern. Somit entsteht eine m&ouml;gliche Schichtzeit von 16 Stunden.</p>\r\n<p>Sicher gibt es Tagesfahrten, die mit wenig Lenkzeit, daf&uuml;r viel \"Herumstehen\" des Fahrers verbunden sind. Da diese Ausnahme aber <b>nicht</b> an Lenkzeiten gekoppelt ist, w&uuml;rde sie auch greifen, wenn eben die max. m&ouml;gliche Lenkzeit am Tag ausgesch&ouml;pft wird. <b>Aber selbst das Herumstehen, vielmehr das \"Herumlungern\" macht bekanntlich auch m&uuml;de.</b> Wenn ein Fahrer zwar nicht viel zu fahren hatte, dennoch aber einen heutigen max. 15-Stunden-Tag hinter sich hat, ist er in der Regel m&uuml;de. Wenn die \"Schichtzeit\" auf 16 Stunden erh&ouml;ht wird, dann bedeutet dies eben auch, inkl. Aufstehen, Bad, Fr&uuml;hst&uuml;ck, zur Arbeitsstelle und zur&uuml;ck fahren, <b>mindestens 20 Stunden</b> wach sein.</p>\r\n<p><b>In den Erw&auml;gungsgr&uuml;nden (auch in den neuen) wird immer wieder auf den sozialen Aspekt hingewiesen</b>. Bei der geplanten Neuregelung wird n&auml;mlich in aller Regel aus Unwissenheit vergessen, dass die Fahrer an einem solchen Tag eben nicht 15 oder 16 Stunden Arbeitszeit bezahlt bekommen. <b>&Uuml;blich sind 8 oder max. 10 Stunden pauschal, da der Fahrer ja die meiste Zeit \"Pause\" hat.</b> Ob nochmal eine Stunde l&auml;nger zum gleichen Lohn den Job attraktiver macht, darf wohl zu Recht bezweifelt werden. Die Verb&auml;nde rechtfertigen ihre Forderungen nach mehr Flexibilit&auml;t immer mit dem Fahrermangel und damit, dass viele Fahrer heute lieber Linienverkehr fahren. Das hat nicht etwa mit Angst vor Strafen im Gelegenheitsverkehr zu tun sondern damit, dass es im Linienverkehr geregelte(re) Arbeitszeiten gibt. Gerade junge Fahrer wollen ihre Freizeit genie&szlig;en und nicht <b>16 Stunden f&uuml;r den Arbeitgeber unterwegs sein und davon die H&auml;lfte bezahlt bekommen</b> - speziell im Vergleich zur Industrie bedeutet dies dann doppelte Arbeit zum halben Preis!</p>\r\n<p><b>Statt den Kunden mit gleicher Intensit&auml;t klar zu machen, dass es einfach Geld kostet, wenn sie 16 Stunden unterwegs sein wollen, wird dieser \"kostenlose\" Kundenservice nun auf dem R&uuml;cken der Fahrer ausgetragen.</b></p>\r\n<p><b>2. Ruhezeitensplitting</b>: Busfahrern im Gelegenheitsverkehr soll eine Aufteilung der T&auml;glichen Ruhezeit in drei Teile gestattet werden &ndash; 1 Std. / 2 Std. und 9 Stunden. Das gab es fr&uuml;her in der VO (EG) 3820/85 schon einmal. Hier wird versucht, die Zeiten des Herumstehens des Busfahrers bereits der Ruhezeit zuzurechnen. In der Folge werden die Fahrer <b>w&auml;hrend der Saison generell nur 9 Stunden Nachtruhe</b> haben und k&ouml;nnen daher intensiver eingesetzt werden. Der Fahrers muss in den 9 Stunden jedoch noch heimfahren, ggf. essen, schlafen und wieder zur Arbeit fahren... <b>Wenn man der Meinung ist, dass eine solche gesplittete Ruhezeit f&uuml;r einen Fahrer ausreichend ist, warum nicht auch f&uuml;r LKW-Fahrer?</b></p>\r\n<p><b>3.</b> <b>Flexibilisierung der Pausen:</b> Hierzu hat der Ausschuss f&uuml;r Arbeit und Soziales das Gremium um die Aufnahme eines &Auml;nderungsantrages gebeten. Konkret soll den Busfahrern im Gelegenheitsverkehr erlaubt werden, die aktuelle Reihenfolge bei der aufgeteilten Fahrtunterbrechung auch umgekehrt nehmen zu d&uuml;rfen, also erst 30 Minuten und dann 15 Minuten.</p>\r\n<p><b>Hiermit wird g&auml;ngige Praxis bei allen Busfahrern forciert:</b> Um unterwegs mit den Fahrg&auml;sten flexibler zu sein, fahren die Fahrer morgens 1 Minute um die Halle und legen dann bereits 15 Minuten Pause ein. In der Folge sind somit 9 Stunden Lenkzeit mit lediglich 30 Minuten Unterbrechung dazwischen m&ouml;glich. Nach dem Vorschlag des Ausschusses dann lediglich 15 Minuten!!!</p>\r\n<p><b>Die heutige Regelung zur Fahrtunterbrechung wurde mit Inkrafttreten der 561 im Erw&auml;gungsgrund 16 plausibel und praxisnah dargelegt: </b><b></b></p>\r\n<p><i>(16) Nach den Vorschriften der Verordnung (EWG) Nr. 3820/85 war es m&ouml;glich, die t&auml;glichen Lenkzeiten und Fahrtunterbrechungen so zu planen, <b>dass Fahrer zu lange ohne eine vollst&auml;ndige Fahrtunterbrechung fahren konnten, was zu Beeintr&auml;chtigungen der Stra&szlig;enverkehrssicherheit</b> und schlechteren Arbeitsbedingungen f&uuml;r die Fahrer gef&uuml;hrt hat. Es ist daher angebracht, sicherzustellen, dass aufgeteilte Fahrtunterbrechungen so angeordnet werden, dass Missbrauch verhindert wird.</i></p>\r\n<p><b>4. Die innerdeutsche 12-Tage-Regelung:</b> Im Grunde hat die bisherige Bedingung \"<i>24h Auslandsaufenthalt</i>\" keine Auswirkung auf die Verkehrssicherheit. Wenn diese Bedingung wegf&auml;llt &auml;ndert sich objektiv nicht viel. Allerdings sollte sichergestellt werden, dass die Bedingung \"<i>einzelner Gelegenheitsdienst</i>\" auch &uuml;berwacht werden kann.</p>\r\n<p><b>Fazit:</b></p>\r\n<p><b>Grunds&auml;tzlich laufen zu viele Sonderregelungen dem erkl&auml;rten Ziel der Kommission zu wider, die Regelungen einfacher und verst&auml;ndlicher zu machen. F&uuml;r Ausbilder ergeben sich jedoch viele neue Auftr&auml;ge, um die dann noch viel komplizierteren Regelungen zu schulen ;-) Ganz interessant wird es dann sicher zuk&uuml;nftig f&uuml;r Fahrer, die sowohl LKW als auch Bus fahren. Hier sind Fehler und somit Verst&ouml;&szlig;e aufgrund der unterschiedlichen Regelungen vorprogrammiert.</b></p>\r\n<p></p>",
+    "author": {
+        "id": "1948601",
+        "online_date": "9999-12-31 00:00:00",
+        "change_date": "2017-05-17 14:39:31",
+        "name": "Olaf Horwarth",
+        "image": "https://media1.verkehrsrundschau.de/sixcms/media.php/5654/2017-05-11%20Logo_6.png",
+        "text": "",
+        "published": 1
+    },
+    "published": 0
+}
+```
+
+This endpoint retrieves a specific Blog Leru Entry.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/blog-entry-leru/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Entry to retrieve
+
+# Ban On Driving
+## Get All Ban On Driving Items from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/ban-on-driving-item/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this (shortened):
+
+```json
+[
+    "2042895",
+    "2054188",
+    "2039259",
+    "2041810",
+    "2041812",
+    "2041815",
+    "2041816",
+    "2041817",
+    "2041818",
+    "2041819",
+    "2041820",
+    "2041821",
+    "2056058",
+    "2041804",
+    "2050461",
+    "2041805",
+    "2042205",
+    "2042209",
+    "2042213"
+]
+```
+
+This endpoint retrieves all Ban On Driving Items with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/ban-on-driving-item/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Ban On Driving Item
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/ban-on-driving-item/detail/2042895"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this (shortened):
+
+```json
+{
+    "id": "2050461",
+    "title": "Belgien_2018_Sondertransporte_60t_Uhrzeit2",
+    "online_date": "2017-12-05 15:43:00",
+    "offline_date": "9999-12-31 00:00:00",
+    "change_date": "2018-06-18 09:28:01",
+    "vehicle_class": {
+        "id": "2041794",
+        "title": "Sondertransporte (Transporte bei denen die Maße und/oder Gewichte überschritten werden)",
+        "online_date": "2017-12-05 15:42:00",
+        "offline_date": "9999-12-31 00:00:00",
+        "change_date": "2017-12-05 15:42:54",
+        "published": 1
+    },
+    "calc_from_date": "2018-01-01 16:00:00",
+    "calc_to_date": "2018-01-01 18:00:00",
+    "calc_iteration_interval": "wöchentlich",
+    "calc_last_iteration_date": "2018-12-31 18:00:00",
+    "calc_flag_monday": true,
+    "calc_flag_tuesday": true,
+    "calc_flag_wednesday": true,
+    "calc_flag_thursday": true,
+    "calc_flag_friday": true,
+    "calc_flag_saturday": true,
+    "calc_flag_sunday": true,
+    "text": "Fahrverbot für Sondertransporte über 60 Tonnen Gewicht, 3,50 Meter Breite und 27 Meter Länge täglich von 7 bis 9 Uhr und von 16 bis 18 Uhr.<br />\r\n<br />\r\n*Angabe bezieht sich auf Strecken, die zum Autobahnnetz gehören sowie auf andere Straßen",
+    "type": "Fahrverbot mit Zusatzregeln",
+    "route": "auf bestimmten Autobahnen *",
+    "country": {
+        "id": "1019545",
+        "title": "Belgien",
+        "online_date": "2011-04-12 15:20:00",
+        "offline_date": "9999-12-31 00:00:00",
+        "change_date": "2011-04-20 12:03:48",
+        "published": 1
+    },
+    "published": 1,
+    "calculated_dates": [
+        {
+            "startDate": "2018-01-01T16:00:00+0100",
+            "endDate": "2018-01-01T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-02T16:00:00+0100",
+            "endDate": "2018-01-02T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-03T16:00:00+0100",
+            "endDate": "2018-01-03T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-04T16:00:00+0100",
+            "endDate": "2018-01-04T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-05T16:00:00+0100",
+            "endDate": "2018-01-05T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-06T16:00:00+0100",
+            "endDate": "2018-01-06T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-07T16:00:00+0100",
+            "endDate": "2018-01-07T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-08T16:00:00+0100",
+            "endDate": "2018-01-08T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-09T16:00:00+0100",
+            "endDate": "2018-01-09T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-10T16:00:00+0100",
+            "endDate": "2018-01-10T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-11T16:00:00+0100",
+            "endDate": "2018-01-11T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-12T16:00:00+0100",
+            "endDate": "2018-01-12T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-13T16:00:00+0100",
+            "endDate": "2018-01-13T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-14T16:00:00+0100",
+            "endDate": "2018-01-14T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-15T16:00:00+0100",
+            "endDate": "2018-01-15T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-16T16:00:00+0100",
+            "endDate": "2018-01-16T18:00:00+0100"
+        },
+        {
+            "startDate": "2018-01-17T16:00:00+0100",
+            "endDate": "2018-01-17T18:00:00+0100"
+        }
+    ]
+}
+```
+
+This endpoint retrieves a specific Ban On Driving Item.
+
+Important: the returned 'calculated_dates' are no real CMS Objects. They are calculated everytime the Item is changed.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/ban-on-driving-item/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Entry to retrieve
+
+
+## Get All Ban On Driving Countrys from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/ban-on-driving-country/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this (shortened):
+
+```json
+[
+    "1019548",
+    "1019571",
+    "1778403",
+    "1019589",
+    "1019573",
+    "1019557",
+    "1019572",
+    "1019556",
+    "1019587",
+    "1019555",
+    "1019586",
+    "1019570"
+]
+```
+
+This endpoint retrieves all Ban On Driving Countrys with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/ban-on-driving-country/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Ban On Driving Country
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/ban-on-driving-country/detail/1019548"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "1019548",
+    "title": "Dänemark",
+    "online_date": "2011-04-12 15:20:00",
+    "offline_date": "9999-12-31 00:00:00",
+    "change_date": "2018-01-19 13:51:11",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Ban On Driving Country.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/ban-on-driving-country/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Entry to retrieve
+
+
+## Get All Ban On Driving Vehicle Classes from given timestamp
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/ban-on-driving-vehicle-class/ids/2"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this (shortened):
+
+```json
+[
+    "2044255",
+    "2044253",
+    "2044236",
+    "2044197",
+    "2043960",
+    "2043928",
+    "2043915",
+    "2043913",
+    "2043911",
+    "2043836",
+    "2043793"
+]
+```
+
+This endpoint retrieves all Ban On Driving Vehicle Classes with change dates greater than give timestamp.
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/ban-on-driving-vehicle-class/ids/<TIMESTAMP>`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+timestamp | 0 | Unix Timestamp to start with
+
+
+## Get a specific Ban On Driving Vehicle Class
+
+
+```shell
+curl "http://rest-api.verkehrsrundschau.de/ban-on-driving-vehicle-class/detail/2044255"  -H "X-Auth-Token: meowmeowmeow"
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": "2044255",
+    "title": "Lkw >24t zGG und Lkw > 7t zGG auf einer Achse",
+    "online_date": "2017-12-12 10:05:00",
+    "offline_date": "9999-12-31 00:00:00",
+    "change_date": "2017-12-12 10:05:47",
+    "published": 1
+}
+```
+
+This endpoint retrieves a specific Ban On Driving Vehicle Class.
+
+
+### HTTP Request
+
+`GET http://rest-api.verkehrsrundschau.de/ban-on-driving-vehicle-class/detail/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Entry to retrieve
 
 # Deleted Objects
 
