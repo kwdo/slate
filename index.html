@@ -455,6 +455,29 @@
               </ul>
           </li>
           <li>
+            <a href="#events" class="toc-h1 toc-link" data-title="events">Events</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-events-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-events-from-given-timestamp">Get All Events from given timestamp</a>
+                  </li>
+                  <li>
+                    <a href="#get-an-event" class="toc-h2 toc-link" data-title="get-an-event">Get an Event</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-internal-events-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-internal-events-from-given-timestamp">Get All Internal Events from given timestamp</a>
+                  </li>
+                  <li>
+                    <a href="#get-an-internal-event" class="toc-h2 toc-link" data-title="get-an-internal-event">Get an Internal Event</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-event-organizers-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-event-organizers-from-given-timestamp">Get All Event Organizers from given timestamp</a>
+                  </li>
+                  <li>
+                    <a href="#get-an-event-organizer" class="toc-h2 toc-link" data-title="get-an-event-organizer">Get an Event Organizer</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#deleted-objects" class="toc-h1 toc-link" data-title="deleted-objects">Deleted Objects</a>
               <ul class="toc-list-h2">
                   <li>
@@ -3783,6 +3806,236 @@ A Field is a combination of an item and an attribute,</p>
 <td>The ID of the Entry to retrieve</td>
 </tr>
 </tbody></table>
+<h1 id='events'>Events</h1><h2 id='get-all-events-from-given-timestamp'>Get All Events from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/event/ids/2"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this (shortened):</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"2182100"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2181549"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2167861"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2181094"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2181092"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2181091"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2157959"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2151551"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2012276"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2012266"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2142272"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2062483"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2139940"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"1923943"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Events with change dates greater than give timestamp.</p>
+<h3 id='http-request-60'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/event/ids/&lt;TIMESTAMP&gt;</code></p>
+<h3 id='query-parameters-32'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>timestamp</td>
+<td>0</td>
+<td>Unix Timestamp to start with</td>
+</tr>
+</tbody></table>
+<h2 id='get-an-event'>Get an Event</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/event/detail/2182100"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2182100"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arbeitsschutz Aktuell 2018"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-20 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-25 15:32:04"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-10-26 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"begin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-10-23"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-10-25"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"organizer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2182091"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HINTE Messe- und Ausstellungs-GmbH"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-20 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-20 10:50:13"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+49721 93133-0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.arbeitsschutz-aktuell.de"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Deutschland"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stuttgart"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;b&gt;Branchenevent des Jahres:&lt;br /&gt;</span><span class="se">\r\n</span><span class="s2">Arbeits- und Gesundheitsschutz-Community trifft sich in Stuttgart&lt;/b&gt;&lt;br /&gt;</span><span class="se">\r\n</span><span class="s2">&lt;br /&gt;</span><span class="se">\r\n</span><span class="s2">Vom 23. bis 25. Oktober 2018 ist die Arbeitsschutz Aktuell mit Fachmesse, Kongress und Regionalforum zu Gast in der Messe Stuttgart. Global Player und regionale Hidden Champions präsentieren ihre Neuheiten und Innovationen für sicheres und gesundes Arbeiten. Elementare Fragen des modernen Arbeits-, Gesundheits- und Umweltschutzes beleuchten der dreitägige Fachkongress und das Regionalforum – letzteres mit besonderem Fokus auf die Herausforderungen für Unternehmen in der Region."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/5709/ASA_Logo2.gif"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves an specific Event.</p>
+<h2 id='get-all-internal-events-from-given-timestamp'>Get All Internal Events from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/event-internal/ids/2"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this (shortened):</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"2171010"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2157567"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2167136"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2060562"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2024639"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2144312"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2150405"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2064684"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2137829"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Internal Events with change dates greater than give timestamp.</p>
+<h3 id='http-request-61'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/event-internal/ids/&lt;TIMESTAMP&gt;</code></p>
+<h3 id='query-parameters-33'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>timestamp</td>
+<td>0</td>
+<td>Unix Timestamp to start with</td>
+</tr>
+</tbody></table>
+<h2 id='get-an-internal-event'>Get an Internal Event</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/event-internal/detail/2157567"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2157567"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Online-Seminar </span><span class="se">\"</span><span class="s2">Lithiumbatterien - Änderungen 2019</span><span class="se">\"</span><span class="s2"> am 13. Juni 2018"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-04-23 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-07 12:06:30"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-14 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"begin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-13"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-13"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"organizer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1812349"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Springer Fachmedien München GmbH"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-15 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-04 10:59:17"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"089/203043-1264"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Deutschland"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;In diesem Online-Seminar werden alle &amp;Auml;nderungen 2019 besprochen.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Dies umfasst die Neuerungen bei den IATA-DGR, dem IMDG-Code sowie im ADR.&lt;br /&gt;Unter anderem geht es um neue Regelungen f&amp;uuml;r defekte Batterien in Form einer neuen Verpackungsanweisung P911 / LP 906.&lt;br /&gt;Auch f&amp;uuml;r Prototypen gibt es eine neue Verpackungsanweisung f&amp;uuml;r die Verwendung von Gro&amp;szlig;verpackungen.&lt;br /&gt;Ein neuer Batterietyp, so genannte Hybridbatterien werden vorgestellt sowie neue Anforderungen f&amp;uuml;r den Nachweis des UN 38.3-Tests.&amp;nbsp;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;b&gt;&lt;b&gt;Termin: &lt;/b&gt;&lt;/b&gt;13.&amp;nbsp;Juni 2018, 10:00 - 11:30 Uhr&lt;br /&gt;&lt;b&gt;&lt;b&gt;Referent: &lt;/b&gt;&lt;/b&gt;J&amp;uuml;rgen Werny, Lithium-Batterie-Service GbR, M&amp;uuml;nchen&lt;br /&gt;&lt;b&gt;Moderation: &lt;/b&gt;Daniela Schulte-Brader, Redakteurin Gefahr/gut&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;b&gt;Was ist ein Online-Seminar?&lt;/b&gt; &lt;br /&gt;Ein Online-Seminar findet &amp;uuml;ber das Internet statt. Sie nehmen teil, indem Sie sich von Ihrem eigenen PC aus in einen virtuellen Seminarraum einloggen. Dort sehen Sie den Referenten und bekommen wichtige Charts eingeblendet. Der Moderator f&amp;uuml;hrt durch die Veranstaltung. Mit Hilfe einer Chat-Funktion haben Sie die M&amp;ouml;glichkeit, Fragen an den Referenten zu stellen.&lt;br /&gt;&lt;b&gt;Ablauf&lt;/b&gt; &lt;br /&gt;Rechtzeitig vor der Veranstaltung erhalten die Teilnehmer von uns die Zugangsdaten und Informationen zum Log-In per E-Mail. Kurz vor Beginn der Veranstaltung um 10:00 loggen Sie sich bitte ein.&lt;br /&gt;&amp;nbsp;&lt;b&gt;&lt;br /&gt;&lt;br /&gt;&lt;/b&gt;&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"topics"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;ul&gt;</span><span class="se">\r\n</span><span class="s2">&lt;li&gt;Neuerungen und &amp;Auml;nderungen der ICAO Technischen Anweisungen und IATA-DGR zum 01.01.2019,&amp;nbsp;(60. Ausgabe des IATA-DGR-Handbuchs)&lt;/li&gt;</span><span class="se">\r\n</span><span class="s2">&lt;li&gt;Neue und ge&amp;auml;nderte Abweichungen der Luftfahrtunternehmen&lt;/li&gt;</span><span class="se">\r\n</span><span class="s2">&lt;li&gt;Neuer Batterietyp Hybrid-Batterien&amp;ldquo;&lt;/li&gt;</span><span class="se">\r\n</span><span class="s2">&lt;li&gt;Neue UN-Nummer 3536 f&amp;uuml;r Lithiumbatterien eingebaut in G&amp;uuml;terbef&amp;ouml;rderungseinheiten&lt;/li&gt;</span><span class="se">\r\n</span><span class="s2">&lt;li&gt;Neue Verpackungsvorschriften u.a. f&amp;uuml;r kritisch defekte Batterien&lt;/li&gt;</span><span class="se">\r\n</span><span class="s2">&lt;li&gt;Neue Sondervorschriften&lt;/li&gt;</span><span class="se">\r\n</span><span class="s2">&lt;li&gt;Neue Regelungen f&amp;uuml;r Elektroaltger&amp;auml;te&lt;/li&gt;</span><span class="se">\r\n</span><span class="s2">&lt;li&gt;Ablauf von &amp;Uuml;bergangsfristen&lt;/li&gt;</span><span class="se">\r\n</span><span class="s2">&lt;/ul&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/fm/3288/key_lithium_620x385.1333320.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"target_group"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Das Online-Seminar wendet sich an Gefahrgutverantwortliche in Spedition und Logistik, Transport- und Versandleiter der chemischen und petrochemischen Industrie, Logistikleiter im Chemiehandel, Gefahrgutbeauftragte, Gefahrgutberater.&lt;b&gt; &lt;/b&gt;&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.verkehrsrundschau.de/events/online-seminar-lithiumbatterien-aenderungen-2019-am-13-juni-2018-2157567.html"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves an specific Internal Event.</p>
+<h3 id='http-request-62'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/event-internal/detail/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-29'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the Internal Event to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='http-request-63'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/event/detail/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-30'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the Event to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-event-organizers-from-given-timestamp'>Get All Event Organizers from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/event-organizer/ids/2"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this (shortened):</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"2182091"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"1549209"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2142273"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2141335"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2139939"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2133643"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"1975715"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2062472"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Event Organizers with change dates greater than give timestamp.</p>
+<h3 id='http-request-64'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/event-organizer/ids/&lt;TIMESTAMP&gt;</code></p>
+<h3 id='query-parameters-34'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>timestamp</td>
+<td>0</td>
+<td>Unix Timestamp to start with</td>
+</tr>
+</tbody></table>
+<h2 id='get-an-event-organizer'>Get an Event Organizer</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/event-organizer/detail/2182091"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2182091"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HINTE Messe- und Ausstellungs-GmbH"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-20 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-20 10:50:13"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+49721 93133-0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.arbeitsschutz-aktuell.de"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves an specific Event Organizer.</p>
+<h3 id='http-request-65'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/event-organizer/detail/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-31'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the Event Organizer to retrieve</td>
+</tr>
+</tbody></table>
 <h1 id='deleted-objects'>Deleted Objects</h1><h2 id='get-all-deleted-objects-from-given-timestamp'>Get All Deleted Objects from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/deleted/1501545600"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 <blockquote>
@@ -3817,9 +4070,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Deleted Objects with deleted dates greater than given timestamp.</p>
-<h3 id='http-request-60'>HTTP Request</h3>
+<h3 id='http-request-66'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/deleted/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-32'>Query Parameters</h3>
+<h3 id='query-parameters-35'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
