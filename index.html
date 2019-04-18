@@ -415,6 +415,12 @@
                     <a href="#get-a-specific-blog-author" class="toc-h2 toc-link" data-title="get-a-specific-blog-author">Get a specific Blog Author</a>
                   </li>
                   <li>
+                    <a href="#get-all-blog-keydata-entries-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-blog-keydata-entries-from-given-timestamp">Get All Blog Keydata Entries from given timestamp</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-blog-keydata-entry" class="toc-h2 toc-link" data-title="get-a-specific-blog-keydata-entry">Get a specific Blog Keydata Entry</a>
+                  </li>
+                  <li>
                     <a href="#get-all-blog-lasi-entries-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-blog-lasi-entries-from-given-timestamp">Get All Blog Lasi Entries from given timestamp</a>
                   </li>
                   <li>
@@ -2424,6 +2430,7 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
     </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Testen Sie die Bedienung der On-Board Unit (OBU) im Online-Tutorial von Toll Collect in mehreren Sprachen."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;div class=</span><span class="se">\"</span><span class="s2">summary</span><span class="se">\"</span><span class="s2">&gt;</span><span class="se">\r\n</span><span class="s2">&lt;div class=</span><span class="se">\"</span><span class="s2">no-overflow</span><span class="se">\"</span><span class="s2">&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Unser Partner Toll Collect stellt kostenfrei verschiedene Online-Tutorials rund um die Maut vor. Die Tutorials sollen Ihnen helfen zu verstehen, wie die Maut funktioniert.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Im VerkehrsRundschau Weiterbildungsportal k&amp;ouml;nnen Sie das Tutorial zur Einbuchung der Maut testen.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;span&gt;Probieren Sie die Bedienung der On-Board Unit (OBU) einfach aus und k&lt;/span&gt;licken Sie sich Schritt f&amp;uuml;r Schritt durch die einzelnen Displayanzeigen der Fahrzeugger&amp;auml;te von Bosch, Grundig, Siemens und Continental.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Das Tutorial steht Ihnen auf Deutsch, Englisch, Franz&amp;ouml;sisch und Polnisch zur Verf&amp;uuml;gung.&amp;nbsp;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Viel Erfolg!&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;/div&gt;</span><span class="se">\r\n</span><span class="s2">&lt;/div&gt;"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/5709/Titelbild_Toll-Collect_neu.jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"show_image_instead_of_video_teaser"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"image_copyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VerkehrsRundschau"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"video"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
     </span><span class="s2">"modules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -4160,6 +4167,119 @@ A Field is a combination of an item and an attribute,</p>
 <td>The ID of the Entry to retrieve</td>
 </tr>
 </tbody></table>
+<h2 id='get-all-blog-keydata-entries-from-given-timestamp'>Get All Blog Keydata Entries from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/blog-entry-keydata/ids/2"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this (shortened):</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"2285699"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Blog Keydata Entries with change dates greater than given timestamp.</p>
+<h3 id='http-request-49'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/blog-entry-keydata/ids/&lt;TIMESTAMP&gt;</code></p>
+<h3 id='query-parameters-27'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>timestamp</td>
+<td>0</td>
+<td>Unix Timestamp to start with</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-blog-keydata-entry'>Get a specific Blog Keydata Entry</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/blog-entry-keydata/detail/2285699"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2285699"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-18 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-18 11:57:10"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Neuer Eintrag"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Neuer Eintrag"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1948601"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-05 15:45:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-18 14:07:48"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Über den Auror"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Olaf Horwarth"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/5654/Logo-Expertenblog_leru.png"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Olaf Horwarth ist offizielles Mitglied im Tachographenforum der EU-Kommission und in weiteren Arbeitsgruppen der EU aktiv. Mit seiner Firma SBS (&lt;a href=</span><span class="se">\"</span><span class="s2">http://www.sbs-info.de</span><span class="se">\"</span><span class="s2"> target=</span><span class="se">\"</span><span class="s2">_blank</span><span class="se">\"</span><span class="s2"> rel=</span><span class="se">\"</span><span class="s2">noopener</span><span class="se">\"</span><span class="s2">&gt;www.sbs-info.de&lt;/a&gt;) schult und ber&amp;auml;t er Fahrer und Unternehmen, die Fahrzeuge &amp;uuml;ber 2,8 t bzw. mit mehr als neun Sitzpl&amp;auml;tzen einsetzen. Seine umfangreichen Praxiserfahrungen erwarb der zertifizierte Trainer, Berater und Buchautor in zahlreichen leitenden und gesch&amp;auml;ftsf&amp;uuml;hrenden Positionen in verschiedenen Verkehrsbetrieben (G&amp;uuml;ter- und Personenverkehr) sowie noch heute gelegentlich als Fahrer von Bus und Lkw. SBS ist als Ausbildungsst&amp;auml;tte nach dem BKrFQG in vielen Bundesl&amp;auml;ndern anerkannt.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Ihre Fragen k&amp;ouml;nnen Sie gerne an&amp;nbsp;&lt;a href=</span><span class="se">\"</span><span class="s2">mailto:leru@springernature.com</span><span class="se">\"</span><span class="s2"> target=</span><span class="se">\"</span><span class="s2">_blank</span><span class="se">\"</span><span class="s2"> rel=</span><span class="se">\"</span><span class="s2">noopener</span><span class="se">\"</span><span class="s2">&gt;leru@springernature.com&lt;/a&gt; schicken.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1605147"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-02-08 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-18 11:35:42"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrTagCountryRegion"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"D-Baden-Württemberg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title_alternativ"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Logistikregion Baden-Württemberg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"synonyms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stuttgart Ulm"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Im VerkehrsRundschau-Dossier &amp;bdquo;Logistikregion Baden-W&amp;uuml;rttemberg&amp;ldquo; finden sich alle aktuellen Nachrichten sowie relevante Hintergrundberichte zum Logistikstandort Baden-W&amp;uuml;rttemberg. Im Fokus stehen Gewerbefl&amp;auml;chen f&amp;uuml;r Logistikimmobilien, Verkehrsinfrastruktur und &amp;ouml;ffentliche Umschlagsanlagen wie G&amp;uuml;terverkehrszentren und H&amp;auml;fen.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/4494/stepmap-karte-verkehrsrundschau-logistikregion-baden-wuerttemberg-1534520%20Kopie.9146755.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image_copyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VerkehrsRundschau/Stepmap"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"customer_logo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1616673"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-03-10 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-18 11:37:07"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrTagPerson"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Raben, Ewald Unternehmer 0000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title_alternativ"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Raben, Ewald"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Im VerkehrsRundschau-Dossier &amp;bdquo;Raben, Ewald&amp;ldquo; finden sich alle aktuellen Nachrichten sowie relevante Hintergrundberichte zur Logistik-Pers&amp;ouml;nlichkeit Ewald Raben.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Der Unternehmer (* im niederl&amp;auml;ndischen Winterswijk) beeinflusst seit der Gr&amp;uuml;ndung seines Logistikunternehmens Raben Group im Jahr 1991 die Entwicklungen in den Bereichen Verkehr, Transport, Spedition und Logistik.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/4494/Raben%20VR%20Erol%20Gurian%20620.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image_copyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VR/Erol Gurian"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"customer_logo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1606017"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-02-08 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-18 11:42:47"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrTagCompanyInstitution"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manitou Mitnahmstapler 1117"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title_alternativ"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manitou Mitnehmstapler"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Im VerkehrsRundschau-Dossier &amp;bdquo;Manitou Mitnehmstapler&amp;ldquo; finden sich aktuelle Nachrichten und Hintergrundberichte zum Unternehmen und den Produkten des Mitnahmestapler-Herstellers Manitou.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/4494/Manitou_TMM25_620.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image_copyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manitou"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"customer_logo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific Blog Lasi Entry.</p>
+<h3 id='http-request-50'>HTTP Request</h3>
+<p><code>GET http://rest-api.verkehrsrundschau.de/blog-entry-keydata/detail/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-23'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the Entry to retrieve</td>
+</tr>
+</tbody></table>
 <h2 id='get-all-blog-lasi-entries-from-given-timestamp'>Get All Blog Lasi Entries from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.verkehrsrundschau.de/blog-entry-lasi/ids/2"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 <blockquote>
@@ -4180,9 +4300,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Blog Lasi Entries with change dates greater than given timestamp.</p>
-<h3 id='http-request-49'>HTTP Request</h3>
+<h3 id='http-request-51'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/blog-entry-lasi/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-27'>Query Parameters</h3>
+<h3 id='query-parameters-28'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4220,13 +4340,58 @@ A Field is a combination of an item and an attribute,</p>
         </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Mein Text&lt;/p&gt;"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
     </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1605147"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-02-08 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-18 11:35:42"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrTagCountryRegion"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"D-Baden-Württemberg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title_alternativ"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Logistikregion Baden-Württemberg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"synonyms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stuttgart Ulm"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Im VerkehrsRundschau-Dossier &amp;bdquo;Logistikregion Baden-W&amp;uuml;rttemberg&amp;ldquo; finden sich alle aktuellen Nachrichten sowie relevante Hintergrundberichte zum Logistikstandort Baden-W&amp;uuml;rttemberg. Im Fokus stehen Gewerbefl&amp;auml;chen f&amp;uuml;r Logistikimmobilien, Verkehrsinfrastruktur und &amp;ouml;ffentliche Umschlagsanlagen wie G&amp;uuml;terverkehrszentren und H&amp;auml;fen.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/4494/stepmap-karte-verkehrsrundschau-logistikregion-baden-wuerttemberg-1534520%20Kopie.9146755.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image_copyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VerkehrsRundschau/Stepmap"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"customer_logo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1616673"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-03-10 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-18 11:37:07"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrTagPerson"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Raben, Ewald Unternehmer 0000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title_alternativ"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Raben, Ewald"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Im VerkehrsRundschau-Dossier &amp;bdquo;Raben, Ewald&amp;ldquo; finden sich alle aktuellen Nachrichten sowie relevante Hintergrundberichte zur Logistik-Pers&amp;ouml;nlichkeit Ewald Raben.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Der Unternehmer (* im niederl&amp;auml;ndischen Winterswijk) beeinflusst seit der Gr&amp;uuml;ndung seines Logistikunternehmens Raben Group im Jahr 1991 die Entwicklungen in den Bereichen Verkehr, Transport, Spedition und Logistik.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/4494/Raben%20VR%20Erol%20Gurian%20620.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image_copyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VR/Erol Gurian"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"customer_logo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1606017"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-02-08 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-18 11:42:47"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrTagCompanyInstitution"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manitou Mitnahmstapler 1117"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title_alternativ"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manitou Mitnehmstapler"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Im VerkehrsRundschau-Dossier &amp;bdquo;Manitou Mitnehmstapler&amp;ldquo; finden sich aktuelle Nachrichten und Hintergrundberichte zum Unternehmen und den Produkten des Mitnahmestapler-Herstellers Manitou.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/4494/Manitou_TMM25_620.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image_copyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manitou"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"customer_logo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
     </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Blog Lasi Entry.</p>
-<h3 id='http-request-50'>HTTP Request</h3>
+<h3 id='http-request-52'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/blog-entry-lasi/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-23'>URL Parameters</h3>
+<h3 id='url-parameters-24'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4262,9 +4427,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Blog Leru Entries with change dates greater than given timestamp.</p>
-<h3 id='http-request-51'>HTTP Request</h3>
+<h3 id='http-request-53'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/blog-entry-leru/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-28'>Query Parameters</h3>
+<h3 id='query-parameters-29'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4301,13 +4466,58 @@ A Field is a combination of an item and an attribute,</p>
         </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
     </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1605147"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-02-08 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-18 11:35:42"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrTagCountryRegion"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"D-Baden-Württemberg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title_alternativ"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Logistikregion Baden-Württemberg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"synonyms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stuttgart Ulm"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Im VerkehrsRundschau-Dossier &amp;bdquo;Logistikregion Baden-W&amp;uuml;rttemberg&amp;ldquo; finden sich alle aktuellen Nachrichten sowie relevante Hintergrundberichte zum Logistikstandort Baden-W&amp;uuml;rttemberg. Im Fokus stehen Gewerbefl&amp;auml;chen f&amp;uuml;r Logistikimmobilien, Verkehrsinfrastruktur und &amp;ouml;ffentliche Umschlagsanlagen wie G&amp;uuml;terverkehrszentren und H&amp;auml;fen.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/4494/stepmap-karte-verkehrsrundschau-logistikregion-baden-wuerttemberg-1534520%20Kopie.9146755.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image_copyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VerkehrsRundschau/Stepmap"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"customer_logo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1616673"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-03-10 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-18 11:37:07"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrTagPerson"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Raben, Ewald Unternehmer 0000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title_alternativ"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Raben, Ewald"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Im VerkehrsRundschau-Dossier &amp;bdquo;Raben, Ewald&amp;ldquo; finden sich alle aktuellen Nachrichten sowie relevante Hintergrundberichte zur Logistik-Pers&amp;ouml;nlichkeit Ewald Raben.&lt;/p&gt;</span><span class="se">\r\n</span><span class="s2">&lt;p&gt;Der Unternehmer (* im niederl&amp;auml;ndischen Winterswijk) beeinflusst seit der Gr&amp;uuml;ndung seines Logistikunternehmens Raben Group im Jahr 1991 die Entwicklungen in den Bereichen Verkehr, Transport, Spedition und Logistik.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/4494/Raben%20VR%20Erol%20Gurian%20620.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image_copyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VR/Erol Gurian"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"customer_logo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1606017"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-02-08 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"offline_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999-12-31 00:00:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"change_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-18 11:42:47"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrTagCompanyInstitution"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manitou Mitnahmstapler 1117"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title_alternativ"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manitou Mitnehmstapler"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"teaser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;Im VerkehrsRundschau-Dossier &amp;bdquo;Manitou Mitnehmstapler&amp;ldquo; finden sich aktuelle Nachrichten und Hintergrundberichte zum Unternehmen und den Produkten des Mitnahmestapler-Herstellers Manitou.&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://media1.verkehrsrundschau.de/sixcms/media.php/4494/Manitou_TMM25_620.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"image_copyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manitou"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"customer_logo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
     </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Blog Leru Entry.</p>
-<h3 id='http-request-52'>HTTP Request</h3>
+<h3 id='http-request-54'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/blog-entry-leru/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-24'>URL Parameters</h3>
+<h3 id='url-parameters-25'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4347,9 +4557,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Ban On Driving Items with change dates greater than given timestamp.</p>
-<h3 id='http-request-53'>HTTP Request</h3>
+<h3 id='http-request-55'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/ban-on-driving-item/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-29'>Query Parameters</h3>
+<h3 id='query-parameters-30'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4480,9 +4690,9 @@ A Field is a combination of an item and an attribute,</p>
 <p>This endpoint retrieves a specific Ban On Driving Item.</p>
 
 <p>Important: the returned &#39;calculated_dates&#39; are no real CMS Objects. They are calculated everytime the Item is changed.</p>
-<h3 id='http-request-54'>HTTP Request</h3>
+<h3 id='http-request-56'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/ban-on-driving-item/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-25'>URL Parameters</h3>
+<h3 id='url-parameters-26'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4515,9 +4725,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Ban On Driving Countrys with change dates greater than given timestamp.</p>
-<h3 id='http-request-55'>HTTP Request</h3>
+<h3 id='http-request-57'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/ban-on-driving-country/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-30'>Query Parameters</h3>
+<h3 id='query-parameters-31'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4547,9 +4757,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Ban On Driving Country.</p>
-<h3 id='http-request-56'>HTTP Request</h3>
+<h3 id='http-request-58'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/ban-on-driving-country/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-26'>URL Parameters</h3>
+<h3 id='url-parameters-27'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4581,9 +4791,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Ban On Driving Vehicle Classes with change dates greater than given timestamp.</p>
-<h3 id='http-request-57'>HTTP Request</h3>
+<h3 id='http-request-59'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/ban-on-driving-vehicle-class/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-31'>Query Parameters</h3>
+<h3 id='query-parameters-32'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4612,9 +4822,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific Ban On Driving Vehicle Class.</p>
-<h3 id='http-request-58'>HTTP Request</h3>
+<h3 id='http-request-60'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/ban-on-driving-vehicle-class/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-27'>URL Parameters</h3>
+<h3 id='url-parameters-28'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4649,9 +4859,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Events with change dates greater than given timestamp.</p>
-<h3 id='http-request-59'>HTTP Request</h3>
+<h3 id='http-request-61'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/event/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-32'>Query Parameters</h3>
+<h3 id='query-parameters-33'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4715,9 +4925,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Internal Events with change dates greater than given timestamp.</p>
-<h3 id='http-request-60'>HTTP Request</h3>
+<h3 id='http-request-62'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/event-internal/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-33'>Query Parameters</h3>
+<h3 id='query-parameters-34'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4764,9 +4974,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves an specific Internal Event.</p>
-<h3 id='http-request-61'>HTTP Request</h3>
+<h3 id='http-request-63'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/event-internal/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-28'>URL Parameters</h3>
+<h3 id='url-parameters-29'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4778,9 +4988,9 @@ A Field is a combination of an item and an attribute,</p>
 <td>The ID of the Internal Event to retrieve</td>
 </tr>
 </tbody></table>
-<h3 id='http-request-62'>HTTP Request</h3>
+<h3 id='http-request-64'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/event/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-29'>URL Parameters</h3>
+<h3 id='url-parameters-30'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4809,9 +5019,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Event Organizers with change dates greater than given timestamp.</p>
-<h3 id='http-request-63'>HTTP Request</h3>
+<h3 id='http-request-65'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/event-organizer/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-34'>Query Parameters</h3>
+<h3 id='query-parameters-35'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4847,9 +5057,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves an specific Event Organizer.</p>
-<h3 id='http-request-64'>HTTP Request</h3>
+<h3 id='http-request-66'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/event-organizer/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-30'>URL Parameters</h3>
+<h3 id='url-parameters-31'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4872,9 +5082,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Playlists with change dates greater than given timestamp.</p>
-<h3 id='http-request-65'>HTTP Request</h3>
+<h3 id='http-request-67'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/playlist/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-35'>Query Parameters</h3>
+<h3 id='query-parameters-36'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4932,9 +5142,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves an specific Playlist.</p>
-<h3 id='http-request-66'>HTTP Request</h3>
+<h3 id='http-request-68'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/playlist/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-31'>URL Parameters</h3>
+<h3 id='url-parameters-32'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4960,9 +5170,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Company Institution Tags with change dates greater than given timestamp.</p>
-<h3 id='http-request-67'>HTTP Request</h3>
+<h3 id='http-request-69'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/tag-company-institution/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-36'>Query Parameters</h3>
+<h3 id='query-parameters-37'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4997,9 +5207,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves an specific Company Institution Tag.</p>
-<h3 id='http-request-68'>HTTP Request</h3>
+<h3 id='http-request-70'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/tag-company-institution/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-32'>URL Parameters</h3>
+<h3 id='url-parameters-33'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5024,9 +5234,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Country Region Tags with change dates greater than given timestamp.</p>
-<h3 id='http-request-69'>HTTP Request</h3>
+<h3 id='http-request-71'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/tag-country-region/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-37'>Query Parameters</h3>
+<h3 id='query-parameters-38'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5061,9 +5271,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves an specific Country Region Tag.</p>
-<h3 id='http-request-70'>HTTP Request</h3>
+<h3 id='http-request-72'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/tag-country-region/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-33'>URL Parameters</h3>
+<h3 id='url-parameters-34'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5089,9 +5299,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Industry Market Tags with change dates greater than given timestamp.</p>
-<h3 id='http-request-71'>HTTP Request</h3>
+<h3 id='http-request-73'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/tag-industry-market/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-38'>Query Parameters</h3>
+<h3 id='query-parameters-39'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5126,9 +5336,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves an specific Industry Market Tag.</p>
-<h3 id='http-request-72'>HTTP Request</h3>
+<h3 id='http-request-74'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/tag-industry-market/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-34'>URL Parameters</h3>
+<h3 id='url-parameters-35'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5153,9 +5363,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Person Tags with change dates greater than give timestamp.</p>
-<h3 id='http-request-73'>HTTP Request</h3>
+<h3 id='http-request-75'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/tag-person/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-39'>Query Parameters</h3>
+<h3 id='query-parameters-40'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5190,9 +5400,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves an specific Person Tag.</p>
-<h3 id='http-request-74'>HTTP Request</h3>
+<h3 id='http-request-76'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/tag-person/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-35'>URL Parameters</h3>
+<h3 id='url-parameters-36'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5218,9 +5428,9 @@ A Field is a combination of an item and an attribute,</p>
 ]
 </span></code></pre>
 <p>This endpoint retrieves all Product Service Tags with change dates greater than give timestamp.</p>
-<h3 id='http-request-75'>HTTP Request</h3>
+<h3 id='http-request-77'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/tag-product-service/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-40'>Query Parameters</h3>
+<h3 id='query-parameters-41'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5254,9 +5464,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves an specific Product Service Tag.</p>
-<h3 id='http-request-76'>HTTP Request</h3>
+<h3 id='http-request-78'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/tag-product-service/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-36'>URL Parameters</h3>
+<h3 id='url-parameters-37'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5281,9 +5491,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Topic Event Tags with change dates greater than give timestamp.</p>
-<h3 id='http-request-77'>HTTP Request</h3>
+<h3 id='http-request-79'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/tag-topic-event/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-41'>Query Parameters</h3>
+<h3 id='query-parameters-42'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5320,9 +5530,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves an specific Topic Event Tag.</p>
-<h3 id='http-request-78'>HTTP Request</h3>
+<h3 id='http-request-80'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/tag-topic-event/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-37'>URL Parameters</h3>
+<h3 id='url-parameters-38'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5351,9 +5561,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Studies with change dates greater than give timestamp.</p>
-<h3 id='http-request-79'>HTTP Request</h3>
+<h3 id='http-request-81'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/study/ids/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-42'>Query Parameters</h3>
+<h3 id='query-parameters-43'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5417,9 +5627,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves an specific Study Tag.</p>
-<h3 id='http-request-80'>HTTP Request</h3>
+<h3 id='http-request-82'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/study/detail/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-38'>URL Parameters</h3>
+<h3 id='url-parameters-39'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5465,9 +5675,9 @@ A Field is a combination of an item and an attribute,</p>
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all Deleted Objects with deleted dates greater than given timestamp.</p>
-<h3 id='http-request-81'>HTTP Request</h3>
+<h3 id='http-request-83'>HTTP Request</h3>
 <p><code>GET http://rest-api.verkehrsrundschau.de/deleted/&lt;TIMESTAMP&gt;</code></p>
-<h3 id='query-parameters-43'>Query Parameters</h3>
+<h3 id='query-parameters-44'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
