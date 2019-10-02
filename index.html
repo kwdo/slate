@@ -244,14 +244,6 @@
               </ul>
           </li>
           <li>
-            <a href="#deleted-objects" class="toc-h1 toc-link" data-title="deleted-objects">Deleted Objects</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-deleted-objects-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-deleted-objects-from-given-timestamp">Get All Deleted Objects from given timestamp</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
             <a href="#image" class="toc-h1 toc-link" data-title="image">Image</a>
               <ul class="toc-list-h2">
                   <li>
@@ -263,10 +255,10 @@
               </ul>
           </li>
           <li>
-            <a href="#deleted-objects-2" class="toc-h1 toc-link" data-title="deleted-objects">Deleted Objects</a>
+            <a href="#deleted-objects" class="toc-h1 toc-link" data-title="deleted-objects">Deleted Objects</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-deleted-objects-from-given-timestamp-2" class="toc-h2 toc-link" data-title="get-all-deleted-objects-from-given-timestamp">Get All Deleted Objects from given timestamp</a>
+                    <a href="#get-all-deleted-objects-from-given-timestamp" class="toc-h2 toc-link" data-title="get-all-deleted-objects-from-given-timestamp">Get All Deleted Objects from given timestamp</a>
                   </li>
               </ul>
           </li>
@@ -439,39 +431,7 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 <td>The ID of the course to retrieve</td>
 </tr>
 </tbody></table>
-<h1 id='deleted-objects'>Deleted Objects</h1><h2 id='get-all-deleted-objects-from-given-timestamp'>Get All Deleted Objects from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.transport-trainer.de/deleted/1501545600"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2147386</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"content_class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrVideoTopic"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deleted_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-30T13:54:03+0200"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2147385</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"content_class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrVideo"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deleted_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-30T13:52:29+0200"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2147384</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"content_class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrMagazineIssue"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deleted_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-30T13:50:01+0200"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2147383</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"content_class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrMagazineArticle"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deleted_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-30T13:49:42+0200"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2147381</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"content_class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VrNews"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"deleted_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-30T13:44:44+0200"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre><h1 id='image'>Image</h1><h2 id='get-all-images-from-given-timestamp'>Get All Images from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.transport-trainer.de/image/ids/1519257600"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+<h1 id='image'>Image</h1><h2 id='get-all-images-from-given-timestamp'>Get All Images from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.transport-trainer.de/image/ids/1519257600"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -548,7 +508,7 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 <td>The ID of the image to retrieve</td>
 </tr>
 </tbody></table>
-<h1 id='deleted-objects-2'>Deleted Objects</h1><h2 id='get-all-deleted-objects-from-given-timestamp-2'>Get All Deleted Objects from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.transport-trainer.de/deleted/1501545600"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+<h1 id='deleted-objects'>Deleted Objects</h1><h2 id='get-all-deleted-objects-from-given-timestamp'>Get All Deleted Objects from given timestamp</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://rest-api.transport-trainer.de/deleted/1501545600"</span>  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
