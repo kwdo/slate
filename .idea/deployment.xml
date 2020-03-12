@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="On explicit save action" promptOnRemoteOverwrite="CHECK_CONTENT" overwriteAll="false" preserveTimestamps="false" createEmptyFolders="true" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;*.pdf;*.tmp;*.log;*.jpg;*.png;*.tar;*.gz;*.zip;*.tif;*.jpeg;*.psd;*.doc;*.ttf;.exe;.bat;" notifyRemoteChanges="true">
+    <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
+  </component>
+</project>

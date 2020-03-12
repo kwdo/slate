@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="63295c30-dd66-4183-a351-5aaa6604defc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/index.html.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.html.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/fast_blank-1.0.0/ext/fast_blank/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/fast_blank-1.0.0/ext/fast_blank/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/fast_blank-1.0.0/ext/fast_blank/fast_blank.bundle" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/fast_blank-1.0.0/ext/fast_blank/fast_blank.bundle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/fast_blank-1.0.0/ext/fast_blank/fast_blank.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/fast_blank-1.0.0/ext/fast_blank/fast_blank.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/fast_blank-1.0.0/lib/fast_blank.bundle" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/fast_blank-1.0.0/lib/fast_blank.bundle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/AbstractMemory.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/AbstractMemory.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/ArrayType.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/ArrayType.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Buffer.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Buffer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Call.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Call.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/ClosurePool.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/ClosurePool.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/DataConverter.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/DataConverter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/DynamicLibrary.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/DynamicLibrary.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Function.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Function.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/FunctionInfo.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/FunctionInfo.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/LastError.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/LastError.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/LongDouble.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/LongDouble.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/MappedType.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/MappedType.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/MemoryPointer.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/MemoryPointer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/MethodHandle.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/MethodHandle.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Platform.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Platform.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Pointer.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Pointer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Struct.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Struct.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/StructByReference.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/StructByReference.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/StructByValue.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/StructByValue.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/StructLayout.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/StructLayout.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Thread.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Thread.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Type.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Type.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Types.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Types.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Variadic.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/Variadic.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/extconf.h" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/extconf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/ffi.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/ffi.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/ffi_c.bundle" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/ext/ffi_c/ffi_c.bundle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/lib/ffi_c.bundle" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/ffi-1.9.17/lib/ffi_c.bundle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/html_document.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/html_document.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/html_element_description.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/html_element_description.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/html_entity_lookup.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/html_entity_lookup.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/html_sax_parser_context.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/html_sax_parser_context.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/html_sax_push_parser.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/html_sax_push_parser.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/nokogiri.bundle" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/nokogiri.bundle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/nokogiri.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/nokogiri.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_attr.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_attr.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_attribute_decl.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_attribute_decl.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_cdata.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_cdata.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_comment.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_comment.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_document.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_document.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_document_fragment.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_document_fragment.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_dtd.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_dtd.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_element_content.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_element_content.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_element_decl.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_element_decl.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_encoding_handler.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_encoding_handler.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_entity_decl.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_entity_decl.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_entity_reference.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_entity_reference.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_io.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_io.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_libxml2_hacks.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_libxml2_hacks.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_namespace.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_namespace.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_node.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_node.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_node_set.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_node_set.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_processing_instruction.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_processing_instruction.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_reader.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_reader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_relax_ng.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_relax_ng.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_sax_parser.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_sax_parser.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_sax_parser_context.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_sax_parser_context.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_sax_push_parser.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_sax_push_parser.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_schema.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_schema.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_syntax_error.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_syntax_error.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_text.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_text.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_xpath_context.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xml_xpath_context.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xslt_stylesheet.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri/xslt_stylesheet.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/lib/nokogiri/nokogiri.bundle" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/nokogiri-1.6.8.1/lib/nokogiri/nokogiri.bundle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/autolink.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/autolink.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/buffer.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/buffer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/houdini_href_e.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/houdini_href_e.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/houdini_html_e.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/houdini_html_e.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/html.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/html.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/html_smartypants.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/html_smartypants.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/markdown.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/markdown.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/rc_markdown.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/rc_markdown.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/rc_render.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/rc_render.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/redcarpet.bundle" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/redcarpet.bundle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/stack.o" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/ext/redcarpet/stack.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/lib/redcarpet.bundle" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/gems/redcarpet-3.4.0/lib/redcarpet.bundle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/specifications/fast_blank-1.0.0.gemspec" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/specifications/fast_blank-1.0.0.gemspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/specifications/ffi-1.9.17.gemspec" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/specifications/ffi-1.9.17.gemspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/specifications/nokogiri-1.6.8.1.gemspec" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/specifications/nokogiri-1.6.8.1.gemspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/specifications/redcarpet-3.4.0.gemspec" beforeDir="false" afterPath="$PROJECT_DIR$/../vendor/bundle/ruby/2.3.0/specifications/redcarpet-3.4.0.gemspec" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1032">
+                <caret line="247" column="1" selection-start-line="247" selection-start-column="1" selection-end-line="247" selection-end-column="1" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/index.html.md" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="261" />
+    <option name="y" value="23" />
+    <option name="width" value="2282" />
+    <option name="height" value="1342" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="source" type="b2602c69:ProjectViewProjectNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="options.lastSelected" value="web.server" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63295c30-dd66-4183-a351-5aaa6604defc" name="Default Changelist" comment="" />
+      <created>1584013696789</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584013696789</updated>
+      <workItem from="1584013697976" duration="71000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="71000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="261" y="23" width="2282" height="1342" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Storybook" side_tool="true" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17901786" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="RNConsole" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Remote Host" />
+      <window_info anchor="right" id="Key Promoter X" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1032">
+            <caret line="247" column="1" selection-start-line="247" selection-start-column="1" selection-end-line="247" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
